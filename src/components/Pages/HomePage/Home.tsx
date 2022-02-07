@@ -98,30 +98,30 @@ const Home = () => {
   //variable for array menu_nav
   let array: any[];
   array = Array(5).fill(0);
-  return (
-    <>
-      <section>
-        <FirstPage />
-      </section>
-      <section>
-        <SecondPage />
-      </section>
-      <section>
-        <ThirdPage />
-      </section>
-      <section>
-        <FourthPage />
-      </section>
-      <section>
-        <FiifthPage />
-      </section>
-      <nav className="menu_nav">
-        {array.map((item, index) => (
-          <button key={index + item} className={`${activeUrl === index ? 'active buttonNav' : 'buttonNav'}`}></button>
-        ))}
-      </nav>
-    </>
-  );
+    return (
+        <>
+            <section>
+                <FirstPage />
+            </section>
+            <section>
+                <SecondPage />
+            </section>
+            <section>
+                <ThirdPage />
+            </section>
+            <section>
+                <FourthPage />
+            </section>
+            <section>
+                <FiifthPage />
+            </section>
+            <nav className="menu_nav">
+                {array.map((item, index) => (
+                    <button key={index + item} className={`${activeUrl === index ? 'active buttonNav' : 'buttonNav'}`}></button>
+                ))}
+            </nav>
+        </>
+    );
 };
 
 export default Home;
