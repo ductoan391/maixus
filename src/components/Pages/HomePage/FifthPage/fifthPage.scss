@@ -1,6 +1,107 @@
 .fifth-container {
+    background-image: url(../../../../Assets/Images/bg_fifthPage.png);
+    height: 100vh;
+    margin: 0 auto;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    .one {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        h3 {
+            color: white;
+        }
+    }
+    .fifth-wrapper {
+        text-align: left;
+        width: 70%;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 5%;
+        left: 10%;
+        .block-item {
+            width: 80%;
+            margin-bottom: 50px;
+            h3 {
+                font-size: 34px;
+                font-weight: bold;
+                color: white;
+                margin-bottom: 0;
+            }
+            a {
+                color: white;
+                p {
+                    color: #cacaca;
+                    z-index: 99;
+                    position: relative;
+                    margin: 0;
+                    padding: 5px 20px;
+                }
+            }
+            .learn-more {
+                animation: moveInRight 1.2s ease-in-out;
+                a {
+                    color: #cacaca;
+                    padding: 5px 20px;
+                    &:hover {
+                        color: white;
+                    }
+                }
+            }
+            .email {
+                position: relative;
+                animation: moveInTop 1.4s ease-in-out;
+                &:hover {
+                    p {
+                        color: black;
+                    }
+                    .mail-icon {
+                        display: block !important;
+                    }
+                }
+                .mail-icon {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: white;
+                    width: 320px;
+                    text-align: right;
+                    z-index: 1;
+                    display: none;
+                    p {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
 }
 @media screen and (max-width: 991px) and(min-width: 767px) {
+    .fifth-container {
+        .one {
+            display: none;
+        }
+        .fifth-wrapper {
+            .block-item {
+                h3 {
+                    font-size: 24px !important;
+                }
+            }
+        }
+    }
 }
 @media screen and (max-width: 600px) {
+    .fifth-container {
+        .fifth-wrapper {
+            width: 90%;
+            .block-item {
+                h3 {
+                    font-size: 18px !important;
+                }
+            }
+        }
+    }
 }
