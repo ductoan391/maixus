@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.scss';
+import SideMenu from './components/SideMenu/SideMenu';
 
 function App() {
   return (
     <div className="App">
-      <h1>cc</h1>
+      <SideMenu />
     </div>
   );
 }

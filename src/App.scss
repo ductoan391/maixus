@@ -1,4 +1,4 @@
-@import "~antd/dist/antd.css";
+// @import "~antd/dist/antd.css";
 
 p {
   margin: 0;
@@ -96,11 +96,11 @@ section {
 }
 @font-face {
   font-family: "Montserrat-Medium";
-  src: url(./Assets/fonts/Montserrat-Medium.ttf);
+  // src: url(./Assets/fonts/Montserrat-Medium.ttf);
 }
 @font-face {
   font-family: "Noto-Sans-KR-Thin";
-  src: url(./Assets/fonts/NotoSansCJKkr-Thin.woff);
+  // src: url(./Assets/fonts/NotoSansCJKkr-Thin.woff);
 }
 @media screen and (max-width: 840px) {
   .menu_nav .active:before {
