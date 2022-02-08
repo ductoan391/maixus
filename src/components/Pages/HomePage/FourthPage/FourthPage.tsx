@@ -9,9 +9,97 @@ import { useTranslation } from 'react-i18next';
 gsap.registerPlugin(ScrollTrigger);
 
 function FourthPage() {
+    const { t } = useTranslation();
+    const data = t('fourth', { returnObjects: true }) as any;
+    var settings = {
+        dots: false,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1023,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    initialSlide: 1,
+                }
+            },
+            {
+                breakpoint: 700,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    initialSlide: 1,
+                    dots: true,
+                }
+            }
+        ]
+    };
+    useEffect(() => {
+        const title = document.querySelector('.fourth-title');
+        const navItems = document.querySelectorAll('.list-story');
+        const animation = () => {
+            const TLFade = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".fourth-page",
+                    start: "top top+=50",
+                    end: "bottom bottom-=50",
+                    toggleActions: "restart reverse restart reverse",
+
+                }
+            });
+            TLFade.from(title, {
+                autoAlpha: 0,
+                y: -220,
+                duration: .8,
+                ease: "power2.out",
+            }, "-=0.1")
+                .from(navItems, {
+                    x: -2020,
+                    stagger: 0.2,
+                    duration: 0.8,
+                    ease: "power2.out",
+                })
+        }
+        animation();
+    }, [])
+    const renderData = data.story.map((val: any) => (
+        <div className={"item-story item-" + (val.title)} key={val.id}>
+            <div className="title">
+                <p className={"title" + (val.title)}>{val.title}</p>
+            </div>
+
+            <div className="item-box">
+                {
+                    val.children.map((child: any) => (
+                        <div className="item-box-item" key={child.id}>
+                            <h2>{child.title}</h2>
+                            <p>{child.type}</p>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+    ))
     return (
         <div className="fourth-page">
-           <h1> Page fourth </h1>
+            <div className='fourth-container'>
+                <h1 className="fourth-title">story</h1>
+                <div className="list-story">
+                    <Slider {...settings}>
+                        {renderData}
+                    </Slider>
+                </div>
+            </div>
         </div>
 
     );

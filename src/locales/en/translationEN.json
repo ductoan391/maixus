@@ -3,253 +3,157 @@
     "address2": "Gangnam-gu, Seoul",
     "address3": "Dosan-daero",
     "fourth": {
-        "history": [
+        "story": [
             {
                 "id": 0,
-                "year": "2020",
-                "childrenYears": [
+                "title": "History",
+                "children": [
                     {
                         "id": 0,
-                        "title": "NETFLX Produces Opening Title of Domestic Drama",
-                        "type": "MOTION"
+                        "title": "2021",
+                        "type": "Changed the company name to Maxius"
                     },
                     {
                         "id": 1,
-                        "title": "Cheil Worldwide / Innocean Partner Selection",
-                        "type": "MOTION"
+                        "title": "2020",
+                        "type": "Second construction of an artificial intelligence-based adaptive security system"
                     },
                     {
                         "id": 2,
-                        "title": "Hyndai Card TVC and Viral Imaging",
-                        "type": "MOTION"
+                        "title": "2019",
+                        "type": "Development of Genome Analysis System Semiconductor and High Performance Storage"
                     },
                     {
                         "id": 3,
-                        "title": "Samsung Grande Dryer AI Digital Video Production",
-                        "type": "MOTION"
+                        "title": "2018",
+                        "type": "고성능 시스템 반도체를 이용한 소형슈퍼컴퓨터 개발 국제공인 TPC 인증"
                     },
                     {
                         "id": 4,
-                        "title": "Samsung Card Collaboration Digital Video Production",
-                        "type": "MOTION"
+                        "title": "2017",
+                        "type": "대기전력 저감 우수제품 확인(한국에너지공단) 기술혁신대상"
                     },
                     {
                         "id": 5,
-                        "title": "JTBC Value-Mental-Posture Spot Video Production",
-                        "type": "MOTION"
+                        "title": "2016",
+                        "type": "방송통신기자재등의 적합등록 필증 획득(국립전파연구원) (주)KT ds MOU 체결"
                     },
                     {
                         "id": 6,
-                        "title": "SKT Quantum + Galaxy A TVC and Digital Imaging",
-                        "type": "MOTION"
-                    },
-                    {
-                        "id": 7,
-                        "title": "Hyundai Oilbank, a symbol, animation production",
-                        "type": "MOTION"
-                    },
-                    {
-                        "id": 8,
-                        "title": "",
-                        "type": ""
-                    },
-                    {
-                        "id": 9,
-                        "title": "",
-                        "type": ""
-                    },
-                    {
-                        "id": 10,
-                        "title": "",
-                        "type": ""
-                    },
-                    {
-                        "id": 11,
-                        "title": "",
-                        "type": ""
+                        "title": " 2015",
+                        "type": "IT 융합기업인상 수상(산업통상자원부) 한국특허기술상 대상(세종대왕상) 수상"
                     },
                     {
                         "id": 12,
-                        "title": "",
-                        "type": ""
+                        "title": "2010",
+                        "type": "국내 최초 PCI Interface Type의 Storage Board SSD 제품 상용화 개발 성공"
                     },
                     {
-                        "id": 13,
-                        "title": "",
-                        "type": ""
-                    },
-                    {
-                        "id": 14,
-                        "title": "",
-                        "type": ""
-                    },
-                    {
-                        "id": 15,
-                        "title": "",
-                        "type": ""
+                        "id": 7,
+                        "title": "1996",
+                        "type": "회사 설립"
                     }
                 ]
             },
             {
                 "id": 1,
-                "year": "2019",
-                "childrenYears": [
+                "title": "Partners",
+                "children": [
                     {
                         "id": 0,
-                        "title": "ma:nyo TVC Production",
-                        "type": "MOTION"
+                        "title": "120 corporate partners",
+                        "type": "Corporation"
                     },
                     {
                         "id": 1,
-                        "title": "ISA KNOX TVC Production",
-                        "type": "MOTION"
+                        "title": "350 additional corporate partners",
+                        "type": "General public"
                     },
                     {
                         "id": 2,
-                        "title": "Samsung Galaxy FAN Curator Video Production",
-                        "type": "MOTION"
+                        "title": "165 additional corporate partners",
+                        "type": "National defense"
                     },
                     {
                         "id": 3,
-                        "title": "Cha-pi CHINA TVC Production",
-                        "type": "MOTION"
+                        "title": "1000개 기업 파트너 체결",
+                        "type": "정부"
                     },
                     {
                         "id": 4,
-                        "title": "Samsung Galaxy Screensaver Video Production",
-                        "type": "MOTION"
+                        "title": "250개 기업 파트너 추가 체결",
+                        "type": "시, 도, 현, 구"
                     },
                     {
                         "id": 5,
-                        "title": "Samsung Galaxy Celeb Live Video Production",
-                        "type": "MOTION"
-                    },
-                    {
-                        "id": 6,
-                        "title": "Type in Search Word: WWW tvn Drama Title Production",
-                        "type": "MOTION"
-                    },
-                    {
-                        "id": 7,
-                        "title": "Samsung Galaxy S10 TVC Production",
-                        "type": "MOTION"
-                    },
-                    {
-                        "id": 8,
-                        "title": "My Country (JTBC Drama) Title Production",
-                        "type": "MOTION"
-                    },
-                    {
-                        "id": 9,
-                        "title": "SK Holdings TVC Production",
-                        "type": "MOTION"
-                    },
-                    {
-                        "id": 10,
-                        "title": "Shinsegae Duty Free Shop TVC Production",
-                        "type": "MOTION"
-                    },
-                    {
-                        "id": 11,
-                        "title": "Chris Lee M/V Production",
-                        "type": "MOTION"
-                    },
-                    {
-                        "id": 12,
-                        "title": "Samsung Galaxy S10 TVC Production",
-                        "type": "MOTION"
-                    },
-                    {
-                        "id": 13,
-                        "title": "Naver Series TVC Production",
-                        "type": "MOTION"
-                    },
-                    {
-                        "id": 14,
-                        "title": "Samsung Galaxy A Domestic and Global TVC Production",
-                        "type": "MOTION"
-                    },
-                    {
-                        "id": 15,
-                        "title": "Multiple other TVC video production and film/drama title sequence production",
-                        "type": "MOTION"
+                        "title": "50개 기업 파트너 추가 체결",
+                        "type": "금융, 통신"
                     }
                 ]
             },
             {
                 "id": 2,
-                "year": "2018",
-                "childrenYears": [
+                "title": "Patent",
+                "children": [
                     {
                         "id": 0,
-                        "title": "LG Display Shocase Video Production",
-                        "type": "MOTION"
+                        "title": "Patent for security system",
+                        "type": "First establishment of an artificial intelligence- based adaptive security system"
                     },
                     {
                         "id": 1,
-                        "title": "SSG Campaign TVC 제작",
-                        "type": "MOTION"
+                        "title": "Patent for system semiconductor",
+                        "type": "Development of small computers using high-performance system semiconductors"
                     },
                     {
                         "id": 2,
-                        "title": "Lineage 2M BI Video Production",
-                        "type": "MOTION"
+                        "title": "Patent certified by TPC",
+                        "type": "International TPC certification"
                     },
                     {
                         "id": 3,
-                        "title": "Netflix TV Show \"Kingdom\" Title 제작",
-                        "type": "MOTION"
+                        "title": "",
+                        "type": ""
                     },
                     {
                         "id": 4,
-                        "title": "Samsung Mobility Shocase Video Production",
-                        "type": "MOTION"
+                        "title": "",
+                        "type": ""
                     },
                     {
                         "id": 5,
-                        "title": "SKT / KT / U+ Mobile Operators TVC Production",
-                        "type": "MOTION"
+                        "title": "",
+                        "type": ""
                     }
                 ]
             },
             {
                 "id": 3,
-                "year": "2017",
-                "childrenYears": [
+                "title": "Awards",
+                "children": [
                     {
                         "id": 0,
-                        "title": "Establishment of \"LOOC Academy,\" a business-focused educational institution",
-                        "type": "ACADEMY"
+                        "title": "KR Sejong the Great Award",
+                        "type": "The best performance and energy-saving technology"
                     },
                     {
                         "id": 1,
-                        "title": "Samsung QLED TV Welcome Video Production",
-                        "type": "MOTION"
+                        "title": "KR Excellent Product Certificate",
+                        "type": "Certification of excellent products in the field of high-performance system quality servers"
                     },
                     {
                         "id": 2,
-                        "title": "G Dragon \"Untitle\" M/V Production",
-                        "type": "MOTION"
+                        "title": "KR Green Technology Certificate",
+                        "type": "Environmentally friendly with highest perfor- mance and maximum efficiency"
                     },
                     {
                         "id": 3,
-                        "title": "TaeYang X Lexus TVC and M/V Producton",
-                        "type": "MOTION"
+                        "title": "",
+                        "type": ""
                     },
                     {
                         "id": 4,
-                        "title": "Hyundai Veloster Viral Video Production",
-                        "type": "MOTION"
-                    }
-                ]
-            },
-            {
-                "id": 4,
-                "year": "2016",
-                "childrenYears": [
-                    {
-                        "id": 0,
-                        "title": "Establishment of loocreative",
+                        "title": "",
                         "type": ""
                     }
                 ]
