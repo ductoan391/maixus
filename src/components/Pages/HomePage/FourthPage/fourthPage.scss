@@ -23,9 +23,10 @@
         font-weight: bold;
         margin-bottom: 40px;
         text-align: center;
-        // visibility: hidden;
+        text-transform: uppercase;
+        font-family: 'Roboto-Bold';
     }
-    .list-history {
+    .list-story{
         position: relative;
         .slick-dots {
             position: absolute;
@@ -60,30 +61,33 @@
             height: 250px;
             overflow-y: auto;
             color: #8b8b8b;
-            padding-right: 15px;
+            padding: 10px 15px;
             h2,
             p {
                 font-size: 12px;
                 margin-bottom: 3px;
             }
             h2 {
-                font-family: "Montserrat-Medium", "Noto-Sans-KR-Thin";
+                font-weight: bold;
+                color: black;
             }
-            .item-year {
+            .item-box-item {
                 padding-top: 30px;
             }
         }
         .slick-current {
-            .year {
+            .title {
                 p {
                     padding-left: 0 !important;
                 }
             }
+            .item-box{
+                padding-left: 0 !important;
+            }
         }
-        .item-history {
+        .item-story {
             text-align: left;
-            padding-right: 15px;
-            .year {
+            .title {
                 p {
                     font-size: 35px;
                     font-weight: bold;
@@ -97,15 +101,9 @@
             ::-webkit-scrollbar-track {
                 background: #cdcdcd;
             }
-            &.item-2020,
-            &.item-2019,
-            &.item-2018,
-            &.item-2017,
-            &.item-2016 {
-                &:hover {
-                    ::-webkit-scrollbar-thumb {
-                        background: black;
-                    }
+            &:hover {
+                ::-webkit-scrollbar-thumb {
+                    background: black;
                 }
             }
         }
