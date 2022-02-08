@@ -78,18 +78,19 @@ section {
   right: 0;
   width: 7px;
   height: 7px;
-  background-color: #fff;
+  background-color: #000;
 }
 .menu_nav button:hover:before {
   width: 30px;
+  background-color: #ff9933;
 }
 
 .menu_nav button.active {
-  background-color: #000;
+  background-color: #ff9933;
 }
 
 .menu_nav .active:before {
-  background-color: #000;
+  background-color: #ff9933;
   width: 25px;
 }
 
