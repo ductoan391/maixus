@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import BG from '../../../../Assets/Images/third-bg.png'
+import BG from '../../../../Assets/Images/banner-03.png'
 import './thirdPage.scss'
 import { gsap } from 'gsap';
 import SectionCard from "./SectionCard";

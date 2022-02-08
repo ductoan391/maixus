@@ -2,9 +2,17 @@ import React, { useEffect } from 'react';
 import './secondPage.scss';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useTranslation } from 'react-i18next';
+import i18n from '../../../../i18n';
+
+
 gsap.registerPlugin(ScrollTrigger);
 
 function SecondPage() {
+    const { t } = useTranslation();
+    const dataList = t("second", { returnObjects: true }) as any;
+
+
     useEffect(() => {
         const text = document.querySelectorAll("text");
         const textArea = document.querySelectorAll(".text-area");
@@ -37,11 +45,11 @@ function SecondPage() {
     }, [])
     return <div className='second-container'>
         <div className="text-area">
-            <p className='text'>1. <span className="text-yellow">자 체 생 산</span> 기 기 제 조 업 체</p>
-            <p className='text'>2 .자 체 생 산 시 스 템 기 기 탑 재</p>
-            <p className='text'><span className="text-yellow">고성능 서버</span> 생산 판매</p>
-            <p className='text'>3. HPS기반 운영 블록체인 IDC 구축 </p>
-            <p className='text'>4. 블록체인 <span className="text-yellow">IPFS</span> 관련 솔루션 구축</p>
+            <p className='text'>{dataList.number1} <span className="text-yellow">{dataList.textYellow1}</span> <span className="text">{dataList.textWhite1}</span> </p>
+            <p className='text'>{dataList.number2} <span className="text">{dataList.textWhite2}</span></p>
+            <p className="text-yellow">{dataList.textYellow2} <span className="text">{dataList.textWhite3}</span></p>
+            <p className='text'>{dataList.number3} <span className="text">{dataList.textWhite4}</span> <span className="text-yellow">{dataList.textYellow3}</span>  </p>
+            <p className='text'>{dataList.number4} <span className="text">{dataList.textWhite6}</span> <span className="text-yellow">{dataList.textYellow4}</span> <span className="text">{dataList.textWhite7}</span>  </p>
         </div>
     </div>;
 }

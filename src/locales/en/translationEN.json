@@ -2,6 +2,23 @@
     "address": "17-10, Dosan-daero 8-gil, Gangnam-gu, Republic of Korea 1F",
     "address2": "Gangnam-gu, Seoul",
     "address3": "Dosan-daero",
+    "second": {
+        "number1": "1.",
+        "number2": "2.",
+        "number3": "3.",
+        "number4": "4.",
+        "textWhite1": "device manufacturer",
+        "textWhite2": "Production and Sales of",
+        "textWhite3": "erformance",
+        "textWhite4": "ervers with self - manufactured system device",
+        "textWhite5": "Construction of operative",
+        "textWhite6": "based on HPS.",
+        "textWhite7": "Establish solu-tion relating to Blockchain",
+        "textYellow1": "Self - produced",
+        "textYellow2": "High ",
+        "textYellow3": "Block chain IDC ",
+        "textYellow4": "IPFS "
+     },
     "fourth": {
         "history": [
             {
