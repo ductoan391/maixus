@@ -10,7 +10,7 @@
         top: 0;
         left: 0;
     }
-    .content {
+    .content-container {
         position: relative;
         padding: 0 10%;
         top: 40%;
@@ -22,15 +22,13 @@
         }
         &__subTitle {
             margin-top: 0.8rem;
-            font-family: $secondary-font;
+            font-family: noto-sans-cjk-kr, sans-serif;
             color: #222;
             font-weight: 300;
             text-align: left;
         }
         &__note {
-
-
-            font-family: $secondary-font;
+            font-family: noto-sans-cjk-kr, sans-serif;
             color: #222;
             font-weight: 300;
             text-align: left;
@@ -40,7 +38,7 @@
 
 @media (max-width: 320px) {
 
-    .content {
+    .content-container {
         &__subTitle {
             width: 20%;
         }
@@ -51,7 +49,7 @@
 }
 @media (max-width: 480px) {
 
-    .content {
+    .content-container {
         &__subTitle {
             width: 20%;
         }
@@ -62,7 +60,7 @@
 }
 @media (max-width: 600px) {
 
-    .content {
+    .content-container {
         &__subTitle {
             width: 20%;
         }
@@ -73,7 +71,7 @@
 }
 @media (max-width: 800px) {
 
-    .content {
+    .content-container {
         &__subTitle {
             width: 35%;
         }
@@ -84,7 +82,7 @@
 }
 @media (max-width: 768px) {
 
-    .content {
+    .content-container {
         &__subTitle {
             width: 70%;
         }
@@ -96,7 +94,7 @@
 
 @media (max-width: 1024px) and (min-width: 1024px){
 
-    .content {
+    .content-container {
         &__subTitle {
             width: 35%;
         }
@@ -107,7 +105,7 @@
 }
 @media (min-width: 1025px) {
 
-    .content {
+    .content-container {
         &__subTitle {
             width: 30%;
             font-size: 1.2rem;
