@@ -307,6 +307,13 @@
     .side-menu-container-change-lang-menu {
         right: 18%;
     }
+    #menu {
+        .list {
+            li {
+                font-size: 39.5px !important;
+            }
+        }
+    }
 }
 
 @media (max-width: 1023.99px) {
