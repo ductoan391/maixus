@@ -48,23 +48,23 @@ const SideMenu = () => {
         const item3 = document.querySelectorAll('.item-3');
         const item4 = document.querySelectorAll('.item-4');
         const item5 = document.querySelectorAll('.item-5');
-    
+
         const revealAnim = () => {
             const TLFade = gsap.timeline({
-               
+
             });
 
-            TLFade.fromTo(item1, {y: '-100%', opacity: 0}, {y: '0%', opacity: 1, duration: 0.1})
-            TLFade.fromTo(item2, {y: '-100%', opacity: 0, delay:-0.1}, {y: '0%', opacity: 1, duration: 0.1})
-            TLFade.fromTo(item3, {y: '-100%', opacity: 0, delay:-0.2}, {y: '0%', opacity: 1, duration: 0.1})
-            TLFade.fromTo(item4, {y: '-100%', opacity: 0, delay:-0.3}, {y: '0%', opacity: 1, duration: 0.1})
-            TLFade.fromTo(item5, {y: '-100%', opacity: 0, delay:-0.4}, {y: '0%', opacity: 1, duration: 0.1})
-        
+            TLFade.fromTo(item1, { y: '-100%', opacity: 0 }, { y: '0%', opacity: 1, duration: 0.1 })
+            TLFade.fromTo(item2, { y: '-100%', opacity: 0, delay: -0.1 }, { y: '0%', opacity: 1, duration: 0.1 })
+            TLFade.fromTo(item3, { y: '-100%', opacity: 0, delay: -0.2 }, { y: '0%', opacity: 1, duration: 0.1 })
+            TLFade.fromTo(item4, { y: '-100%', opacity: 0, delay: -0.3 }, { y: '0%', opacity: 1, duration: 0.1 })
+            TLFade.fromTo(item5, { y: '-100%', opacity: 0, delay: -0.4 }, { y: '0%', opacity: 1, duration: 0.1 })
+
         };
 
         revealAnim();
     }, [showItemBrochure, showItemProposal]);
- 
+
 
     return (
         <>
