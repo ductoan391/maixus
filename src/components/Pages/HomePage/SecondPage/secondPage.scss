@@ -1,5 +1,5 @@
 .second-container {
-    background: url("../../../../Assets/Images/banner-02-kr.png") no-repeat center;
+    background: url('../../../../Assets/Images/banner-02-kr.png') no-repeat center;
     position: relative;
     height: 100vh;
     display: flex;
@@ -11,6 +11,10 @@
     .text-area {
         line-height: 95px;
         color: white;
+        max-width: 1500px;
+        line-height: 1.18;
+        font-size: 67px;
+        font-weight: bold;
         .text {
             letter-spacing: 5px;
             font-size: 67px;
@@ -29,6 +33,7 @@
     .second-container {
         .text-area {
             color: white;
+            max-width: 900px;
             .text {
                 letter-spacing: 3px;
                 font-size: 40px;
@@ -48,6 +53,7 @@
         .text-area {
             color: white;
             line-height: 50px;
+            max-width: 500px;
             .text {
                 letter-spacing: 3px;
                 font-size: 25px;
@@ -65,15 +71,16 @@
 @media screen and (max-width: 483px) {
     .second-container {
         .text-area {
-            line-height: unset;
+            line-height: 0.5;
             color: white;
+            max-width: 300px;
             .text {
                 letter-spacing: 2px;
                 font-size: 20px;
                 font-weight: bold;
             }
             .text-yellow {
-                font-size: 20px;
+                font-size: 20px !important;
                 color: #ff9933;
                 font-weight: bold;
             }
