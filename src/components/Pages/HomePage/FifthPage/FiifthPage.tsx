@@ -1,13 +1,78 @@
 import { useEffect } from 'react';
 import './fifthPage.scss';
 import { gsap } from "gsap";
+import { RightOutlined } from '@ant-design/icons'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 function FiifthPage() {
+    useEffect(() => {
+        const titleName = document.querySelectorAll(".fifth-name");
+        const contact = document.querySelectorAll(".fifth-contact");
+        const learnMore = document.querySelectorAll(".learn-more");
+        const animation = () => {
+            const TLFade = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".fifth-container",
+                    start: "top top+=50",
+                    end: "bottom bottom-=50",
+                    toggleActions: "restart reverse restart reverse",
+                    markers: false,
+                }
+            });
+            TLFade.from(titleName, {
+                x: 820,
+                stagger: 0.2,
+                duration: 0.6,
+                ease: "power2.out",
+            }, "-=0.1")
+                .from(contact, {
+                    autoAlpha: 0,
+                    y: -220,
+                    stagger: 0.1,
+                    duration: 0.5,
+                    ease: "power2.out",
+                })
+                .from(learnMore, {
+                    autoAlpha: 0,
+                    x: 420,
+                    stagger: 0.3,
+                    duration: 0.9,
+                    ease: "power2.out",
+                })
+        };
 
+        animation();
+    }, []);
     return (
         <div className='fifth-container'>
-            <h1>Page 5</h1>
+            <div className="one fifth-contact">
+                <h3>maxius</h3>
+            </div>
+            <div className="fifth-wrapper">
+                <div className="block-item">
+                    <h3 className="fifth-name">Company.</h3>
+                    <div className="email">
+                        <a href="mailto:support@taejin.co.kr">
+                            <p className="fifth-contact">support@taejin.co.kr</p>
+                            <div className="mail-icon">
+                                <p>✉</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div className="block-item">
+                    <h3 className="fifth-name">Warranty.</h3>
+                    <div className="learn-more">
+                        <a href="#">Learn more <RightOutlined /></a>
+                    </div>
+                </div>
+                <div className="block-item">
+                    <h3 className="fifth-name">Technical support.</h3>
+                    <div className="learn-more">
+                        <a href="#">Learn more <RightOutlined /></a>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }

@@ -3,253 +3,157 @@
     "address2": "서울특별시 강남구",
     "address3": "도산대로",
     "fourth": {
-        "history": [
+        "story": [
             {
                 "id": 0,
-                "year": "2020",
-                "childrenYears": [
+                "title": "History",
+                "children": [
                     {
                         "id": 0,
-                        "title": "NETFLX 국내 드라마 오프닝 타이틀 제작",
-                        "type": "MOTION"
+                        "title": "2021",
+                        "type": "맥시우스로 사명 변경"
                     },
                     {
                         "id": 1,
-                        "title": "제일기획 / 이노션 협력업체 선정",
-                        "type": "MOTION"
+                        "title": "2020",
+                        "type": "인공지능기반 적응형 보안시스템 2차 구축"
                     },
                     {
                         "id": 2,
-                        "title": "현대 카드 TVC 및 바이럴 영상 제작",
-                        "type": "MOTION"
+                        "title": "2019",
+                        "type": "유전체 분석 시스템 반도체 개발 및 고성능스토리지 개발"
                     },
                     {
                         "id": 3,
-                        "title": "삼성 그랑데 건조기 AI 디지털영상제작",
-                        "type": "MOTION"
+                        "title": "2018",
+                        "type": "고성능 시스템 반도체를 이용한 소형슈퍼컴퓨터 개발 국제공인 TPC 인증"
                     },
                     {
                         "id": 4,
-                        "title": "삼성카드 콜라보레이션 디지털 영상제작",
-                        "type": "MOTION"
+                        "title": "2017",
+                        "type": "대기전력 저감 우수제품 확인(한국에너지공단) 기술혁신대상"
                     },
                     {
                         "id": 5,
-                        "title": "JTBC 가치-정신-자세 스팟 영상 제작",
-                        "type": "MOTION"
+                        "title": "2016",
+                        "type": "방송통신기자재등의 적합등록 필증 획득(국립전파연구원) (주)KT ds MOU 체결"
                     },
                     {
                         "id": 6,
-                        "title": "SKT 퀀텀 + 갤럭시 A TVC 및 디지털 영상제작",
-                        "type": "MOTION"
-                    },
-                    {
-                        "id": 7,
-                        "title": "현대오일뱅크 심볼 애니메이션 제작",
-                        "type": "MOTION"
-                    },
-                    {
-                        "id": 8,
-                        "title": "",
-                        "type": ""
-                    },
-                    {
-                        "id": 9,
-                        "title": "",
-                        "type": ""
-                    },
-                    {
-                        "id": 10,
-                        "title": "",
-                        "type": ""
-                    },
-                    {
-                        "id": 11,
-                        "title": "",
-                        "type": ""
+                        "title": " 2015",
+                        "type": "IT 융합기업인상 수상(산업통상자원부) 한국특허기술상 대상(세종대왕상) 수상"
                     },
                     {
                         "id": 12,
-                        "title": "",
-                        "type": ""
+                        "title": "2010",
+                        "type": "국내 최초 PCI Interface Type의 Storage Board SSD 제품 상용화 개발 성공"
                     },
                     {
-                        "id": 13,
-                        "title": "",
-                        "type": ""
-                    },
-                    {
-                        "id": 14,
-                        "title": "",
-                        "type": ""
-                    },
-                    {
-                        "id": 15,
-                        "title": "",
-                        "type": ""
+                        "id": 7,
+                        "title": "1996",
+                        "type": "회사 설립"
                     }
                 ]
             },
             {
                 "id": 1,
-                "year": "2019",
-                "childrenYears": [
+                "title": "Partners",
+                "children": [
                     {
                         "id": 0,
-                        "title": "마녀공장 TVC 제작",
-                        "type": "MOTION"
+                        "title": "120개 기업 파트너 체결",
+                        "type": "법인 회사"
                     },
                     {
                         "id": 1,
-                        "title": "이자녹스 TVC 제작",
-                        "type": "MOTION"
+                        "title": "350개 기업 파트너 추가 체결",
+                        "type": "일반 기업"
                     },
                     {
                         "id": 2,
-                        "title": "Samsung Galaxy FAN Curator 영상 제작",
-                        "type": "MOTION"
+                        "title": "165개 기업 파트너 추가 체결",
+                        "type": "국방"
                     },
                     {
                         "id": 3,
-                        "title": "Cha-pi CHINA TVC 제작",
-                        "type": "MOTION"
+                        "title": "1000개 기업 파트너 체결",
+                        "type": "정부"
                     },
                     {
                         "id": 4,
-                        "title": "Samsung Galaxy Screensaver 영상 제작",
-                        "type": "MOTION"
+                        "title": "250개 기업 파트너 추가 체결",
+                        "type": "시, 도, 현, 구"
                     },
                     {
                         "id": 5,
-                        "title": "Samsung Galaxy Celeb Live 영상 제작",
-                        "type": "MOTION"
-                    },
-                    {
-                        "id": 6,
-                        "title": "WWW '검색어를 입력하세요' tvn 드라마 Title 제작",
-                        "type": "MOTION"
-                    },
-                    {
-                        "id": 7,
-                        "title": "Samsung Galaxy S10 TVC 제작",
-                        "type": "MOTION"
-                    },
-                    {
-                        "id": 8,
-                        "title": "나의 나라 JTBC 드라마 Title 제작",
-                        "type": "MOTION"
-                    },
-                    {
-                        "id": 9,
-                        "title": "SK홀딩스 TVC 제작",
-                        "type": "MOTION"
-                    },
-                    {
-                        "id": 10,
-                        "title": "신세계 면제점 TVC 제작",
-                        "type": "MOTION"
-                    },
-                    {
-                        "id": 11,
-                        "title": "Chris lee M/V 제작",
-                        "type": "MOTION"
-                    },
-                    {
-                        "id": 12,
-                        "title": "롯데케미컬 TVC Production",
-                        "type": "MOTION"
-                    },
-                    {
-                        "id": 13,
-                        "title": "네이버 시리즈 TVC 제작",
-                        "type": "MOTION"
-                    },
-                    {
-                        "id": 14,
-                        "title": "Samsung Galaxy A 국내 및 글로벌 TVC 제작",
-                        "type": "MOTION"
-                    },
-                    {
-                        "id": 15,
-                        "title": "그 외 다수 TVC 영상 제작 및 영화/드라마 타이틀 시퀀스 제작",
-                        "type": "MOTION"
+                        "title": "50개 기업 파트너 추가 체결",
+                        "type": "금융, 통신"
                     }
                 ]
             },
             {
                 "id": 2,
-                "year": "2018",
-                "childrenYears": [
+                "title": "Patent",
+                "children": [
                     {
                         "id": 0,
-                        "title": "LG Display Shocase 영상 제작",
-                        "type": "MOTION"
+                        "title": "보안 시스템 특허",
+                        "type": "인공지능 기반 적응형 보안시스템 1차 구축"
                     },
                     {
                         "id": 1,
-                        "title": "SSG 켐페일 TVC 제작",
-                        "type": "MOTION"
+                        "title": "시스템 반도체 특허",
+                        "type": "고성능 시스템 반도체를 이용한 소형컴퓨터 개발"
                     },
                     {
                         "id": 2,
-                        "title": "Lineage 2M BI 영상 제작",
-                        "type": "MOTION"
+                        "title": "TPC 인증 특허",
+                        "type": "국제 공인 TPC 인증"
                     },
                     {
                         "id": 3,
-                        "title": "Netflix TV Show \"Kingdom\" Title 제작",
-                        "type": "MOTION"
+                        "title": "",
+                        "type": ""
                     },
                     {
                         "id": 4,
-                        "title": "Samsung Mobility Showcase 영상 제작",
-                        "type": "MOTION"
+                        "title": "",
+                        "type": ""
                     },
                     {
                         "id": 5,
-                        "title": "SKT / KT / U+ 통신사 TVC 제작",
-                        "type": "MOTION"
+                        "title": "",
+                        "type": ""
                     }
                 ]
             },
             {
                 "id": 3,
-                "year": "2017",
-                "childrenYears": [
+                "title": "Awards",
+                "children": [
                     {
                         "id": 0,
-                        "title": "실무중심의 교육기관 \"루크 아카데미\" 설립",
-                        "type": "ACADEMY"
+                        "title": "대한민국 특허 대상  세종대왕상 수상",
+                        "type": "뛰어난 성능과 에너지 절약 기술로 국내 최고 특허 상 수상"
                     },
                     {
                         "id": 1,
-                        "title": "삼성 QLED TV 웰컴 비디오 제작",
-                        "type": "MOTION"
+                        "title": "대한민국 우수제품지정증서 인증",
+                        "type": "고성능 시스템 품질을 인정 받은 국내 유일의 서버분야 우수조달 등록제품 인증"
                     },
                     {
                         "id": 2,
-                        "title": "지드래곤 \"Untitle\" M/V 제작",
-                        "type": "MOTION"
+                        "title": "대한민국 녹색기술인증서 인증",
+                        "type": " 최고 성능 및 최대 효율을 자랑하는 환경친화적 기술 보유"
                     },
                     {
                         "id": 3,
-                        "title": "태양 X Lexus TVC 및 M/V 제작",
-                        "type": "MOTION"
+                        "title": "",
+                        "type": ""
                     },
                     {
                         "id": 4,
-                        "title": "현대 벨로스터 바이럴 영상 제작",
-                        "type": "MOTION"
-                    }
-                ]
-            },
-            {
-                "id": 4,
-                "year": "2016",
-                "childrenYears": [
-                    {
-                        "id": 0,
-                        "title": "루크레이티브 설립",
+                        "title": "",
                         "type": ""
                     }
                 ]
