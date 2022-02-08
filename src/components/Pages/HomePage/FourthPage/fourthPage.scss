@@ -77,9 +77,7 @@
         }
         .slick-current {
             .title {
-                p {
-                    padding-left: 0 !important;
-                }
+                padding-left: 0 !important;
             }
             .item-box{
                 padding-left: 0 !important;
@@ -88,12 +86,10 @@
         .item-story {
             text-align: left;
             .title {
-                p {
-                    font-size: 35px;
-                    font-weight: bold;
-                    padding-left: 10px;
-                    margin-bottom: 0;
-                }
+                font-size: 35px;
+                font-weight: bold;
+                padding-left: 10px;
+                margin-bottom: 0;
             }
             ::-webkit-scrollbar {
                 width: 1px;

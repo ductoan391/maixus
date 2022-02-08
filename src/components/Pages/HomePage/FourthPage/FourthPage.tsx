@@ -74,9 +74,7 @@ function FourthPage() {
     }, [])
     const renderData = data.story.map((val: any) => (
         <div className={"item-story item-" + (val.title)} key={val.id}>
-            <div className="title">
-                <p className={"title" + (val.title)}>{val.title}</p>
-            </div>
+            <p className={"title title" + (val.title)}>{val.title}</p>
 
             <div className="item-box">
                 {
