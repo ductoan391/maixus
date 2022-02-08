@@ -1,12 +1,17 @@
-import React, { useState } from 'react';
-import { Routes, Route, NavLink } from 'react-router-dom';
+import { gsap } from 'gsap';
+import React, { useLayoutEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { NavLink, Route, Routes } from 'react-router-dom';
+import arrow from '../../Assets/Images/arrow-icon.png';
+import i18n from '../../i18n';
+import Contact from '../Pages/Contact/Contact';
 import Home from '../Pages/HomePage/Home';
 import './SideMenu.scss';
-import { useTranslation } from 'react-i18next';
-import i18n from '../../i18n';
 
 const SideMenu = () => {
-    const [selected, setSelected] = React.useState<'ko' | 'en'>('ko');
+    const [selected, setSelected] = useState<'ko' | 'en'>('ko');
+    const [showItemBrochure, setShowItemBrochure] = useState<boolean>(false);
+    const [showItemProposal, setShowItemProposal] = useState<boolean>(false);
     const { t } = useTranslation();
 
     const [closeSideMenu, setCloseSideMenu] = useState<boolean>();
@@ -21,23 +26,62 @@ const SideMenu = () => {
         }
     };
 
+    const handleClickBrochure = () => {
+        setShowItemProposal(false);
+        setShowItemBrochure(!showItemBrochure);
+    };
+    const handleClickProposal = () => {
+        setShowItemBrochure(false);
+        setShowItemProposal(!showItemProposal);
+    };
+    const handleClickHome = () => {
+        setCloseSideMenu(false);
+        setShowItemProposal(false);
+        setShowItemBrochure(false);
+    }
+
+
+    useLayoutEffect(() => {
+        const brochureList = document.querySelectorAll('.brochure-list');
+        const item1 = document.querySelectorAll('.item-1');
+        const item2 = document.querySelectorAll('.item-2');
+        const item3 = document.querySelectorAll('.item-3');
+        const item4 = document.querySelectorAll('.item-4');
+        const item5 = document.querySelectorAll('.item-5');
+    
+        const revealAnim = () => {
+            const TLFade = gsap.timeline({
+               
+            });
+
+            TLFade.fromTo(item1, {y: '-100%', opacity: 0}, {y: '0%', opacity: 1, duration: 0.1})
+            TLFade.fromTo(item2, {y: '-100%', opacity: 0, delay:-0.1}, {y: '0%', opacity: 1, duration: 0.1})
+            TLFade.fromTo(item3, {y: '-100%', opacity: 0, delay:-0.2}, {y: '0%', opacity: 1, duration: 0.1})
+            TLFade.fromTo(item4, {y: '-100%', opacity: 0, delay:-0.3}, {y: '0%', opacity: 1, duration: 0.1})
+            TLFade.fromTo(item5, {y: '-100%', opacity: 0, delay:-0.4}, {y: '0%', opacity: 1, duration: 0.1})
+        
+        };
+
+        revealAnim();
+    }, [showItemBrochure, showItemProposal]);
+ 
+
     return (
         <>
             <Routes>
                 <Route path="/" element={<Home />} />
-
+                <Route path="contact" element={<Contact />} />
             </Routes>
-
             <div className="side-menu-container">
                 <nav role="navigation">
                     <div id="side-menu-toggle">
                         <input type="checkbox" checked={closeSideMenu} onClick={() => setCloseSideMenu((prev) => !prev)} />
                         <div className="side-menu-container-change-lang-wrapper">
-                            <div className={`change-lang ko ${selected === 'ko' ? 'select' : ''}`} onClick={() => handleChangeLanguage('ko')}>
-                                KR
-                            </div>
                             <div className={`change-lang en ${selected === 'en' ? 'select' : ''}`} onClick={() => handleChangeLanguage('en')}>
                                 EN
+                            </div>
+                            <div className={`change-lang ko ${selected === 'ko' ? 'select' : ''}`} onClick={() => handleChangeLanguage('ko')}>
+                                KR
                             </div>
                         </div>
 
@@ -47,35 +91,63 @@ const SideMenu = () => {
                         <ul id="menu">
                             <div className="side-menu-container-change-lang-menu">
                                 <div
-                                    className={`side-menu-container-change-lang-menu-item ko ${selected === 'ko' ? 'select' : ''}`}
-                                    onClick={() => handleChangeLanguage('ko')}
-                                >
-                                    KR
-                                </div>
-                                <div
                                     className={`side-menu-container-change-lang-menu-item ko ${selected === 'en' ? 'select' : ''}`}
                                     onClick={() => handleChangeLanguage('en')}
                                 >
                                     EN
                                 </div>
+                                <div
+                                    className={`side-menu-container-change-lang-menu-item ko ${selected === 'ko' ? 'select' : ''}`}
+                                    onClick={() => handleChangeLanguage('ko')}
+                                >
+                                    KR
+                                </div>
                             </div>
-                            <NavLink className="list" to="/" onClick={() => setCloseSideMenu(false)}>
+                            <NavLink className="list" to="/" onClick={() => handleClickHome()}>
                                 <li>Home</li>
                             </NavLink>
-                            <NavLink className="list" to="/works" onClick={() => setCloseSideMenu(false)}>
-                                <li>Works</li>
-                            </NavLink>
-                            <NavLink className="list" to="/teams" onClick={() => setCloseSideMenu(false)}>
-                                <li>Teams</li>
-                            </NavLink>
-                            <NavLink className="list" to="/contact" onClick={() => setCloseSideMenu(false)}>
+                            <div className="list" onClick={() => handleClickBrochure()}>
+                                <li className={`${showItemBrochure ? 'choose' : ''}`}>Brochure</li>
+                                <ul className={`brochure-list ${showItemBrochure ? '' : 'disable'}`}>
+                                    <li className="brochure-item item-1">
+                                        <p>Download-1</p> <img src={arrow} alt=""></img>
+                                    </li>
+                                    <li className="brochure-item item-2">
+                                        <p>Download-2</p> <img src={arrow} alt=""></img>
+                                    </li>
+                                    <li className="brochure-item item-3">
+                                        <p>Download-3</p> <img src={arrow} alt=""></img>
+                                    </li>
+                                    <li className="brochure-item item-4">
+                                        <p>Download-4</p> <img src={arrow} alt=""></img>
+                                    </li>
+                                    <li className="brochure-item item-5">
+                                        <p>Download-5</p> <img src={arrow} alt=""></img>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="list" onClick={() => handleClickProposal()}>
+                                <li className={`${showItemProposal ? 'choose' : ''}`}>Proposal</li>
+                                <ul className={`proposal-list ${showItemProposal ? '' : 'disable'}`}>
+                                    <li className="proposal-item item-1">
+                                        <p>Download-1</p> <img src={arrow} alt=""></img>
+                                    </li>
+                                    <li className="proposal-item item-2">
+                                        <p>Download-2</p> <img src={arrow} alt=""></img>
+                                    </li>
+                                    <li className="proposal-item item-3">
+                                        <p>Download-3</p> <img src={arrow} alt=""></img>
+                                    </li>
+                                </ul>
+                            </div>
+                            <NavLink className="list" to="/contact" onClick={() => handleClickHome()}>
                                 <li>Contact</li>
                             </NavLink>
                             <div className="info-wrapper">
                                 <p id="address">
                                     {t('address')}
                                     <br />
-                                    Tel 02. 543. 4983 / Fax 02. 6280. 4079
+                                    Tel 02. 851. 2662/ Fax 02. 851. 2662
                                 </p>
                                 <p className="link">
                                     <a
@@ -86,17 +158,17 @@ const SideMenu = () => {
                                     </a>
                                 </p>
                                 <br />
-                                <p>Work with us.</p>
+                                <p>Company.</p>
                                 <p className="link">
-                                    <a href="mailto:loocreative@playlooc.com" title="">
-                                        loocreative@playlooc.com
+                                    <a href="mailto:support@taejin.co.kr" title="">
+                                        support@taejin.co.kr
                                     </a>
                                 </p>
                                 <br />
-                                <p>Recruiting</p>
+                                <p>Technical support</p>
                                 <p className="link">
-                                    <a href="mailto:loocreative@playlooc.com" title="">
-                                        loocreative@playlooc.com
+                                    <a href="mailto:support@taejin.co.kr" title="">
+                                        support@taejin.co.kr
                                     </a>
                                 </p>
                             </div>
