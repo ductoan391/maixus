@@ -6,8 +6,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 function SecondPage() {
     useEffect(() => {
-        const firstContent = document.querySelectorAll(".first_content");
-        const secondContent = document.querySelectorAll(".second_content");
+        const text = document.querySelectorAll("text");
+        const textArea = document.querySelectorAll(".text-area");
         const animation = () => {
             const TLFade = gsap.timeline({
                 scrollTrigger: {
@@ -18,14 +18,14 @@ function SecondPage() {
                     markers: false,
                 }
             });
-            TLFade.from(firstContent, {
+            TLFade.from(text, {
                 autoAlpha: 0,
                 y: -50,
                 stagger: 0.1,
                 duration: 0.5,
                 ease: "power2.out",
             }, "-=0.1")
-                .from(secondContent, {
+                .from(textArea, {
                     x: -3000,
                     stagger: 0.2,
                     duration: 0.8,
@@ -36,17 +36,13 @@ function SecondPage() {
         animation();
     }, [])
     return <div className='second-container'>
-        <div className="first_content">
-            <p>LOOCREATIVE</p>
-            <p>PHILOSOPHY</p>
+        <div className="text-area">
+            <p className='text'>1. <span className="text-yellow">자 체 생 산</span> 기 기 제 조 업 체</p>
+            <p className='text'>2 .자 체 생 산 시 스 템 기 기 탑 재</p>
+            <p className='text'><span className="text-yellow">고성능 서버</span> 생산 판매</p>
+            <p className='text'>3. HPS기반 운영 블록체인 IDC 구축 </p>
+            <p className='text'>4. 블록체인 <span className="text-yellow">IPFS</span> 관련 솔루션 구축</p>
         </div>
-        <div className="second_content">
-            <p>Dreams come true</p>
-            <p>Without that possibility,</p>
-            <p>Nature would not incite</p>
-            <p>us to have them.</p>
-        </div>
-
     </div>;
 }
 
