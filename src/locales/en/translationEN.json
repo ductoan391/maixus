@@ -8,17 +8,20 @@
         "number3": "3.",
         "number4": "4.",
         "textWhite1": "device manufacturer",
-        "textWhite2": "Production and Sales of",
-        "textWhite3": "erformance",
-        "textWhite4": "ervers with self - manufactured system device",
-        "textWhite5": "Construction of operative",
-        "textWhite6": "based on HPS.",
-        "textWhite7": "Establish solu-tion relating to Blockchain",
+        "textWhite21": "Production and Sales of",
+        "textWhite22": "igh-",
+        "textWhite23": "erformance",
+        "textWhite24": "ervers with self - manufactured system device",
+        "textWhite31": "Construction of operative",
+        "textWhite32": "based on HPS.",
+        "textWhite4": "Establish solu-tion relating to Blockchain",
         "textYellow1": "Self - produced",
-        "textYellow2": "High ",
+        "textYellow21": "H",
+        "textYellow22": "P",
+        "textYellow23": "S",
         "textYellow3": "Block chain IDC ",
         "textYellow4": "IPFS "
-     },
+    },
     "fourth": {
         "story": [
             {
@@ -197,7 +200,7 @@
             {
                 "id": 4,
                 "title": "Block Chain",
-                "content" : ""
+                "content": ""
             }
         ]
     },
