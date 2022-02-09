@@ -23,6 +23,7 @@ function FirstPage() {
 
 
     useEffect(() => {
+        const logo = document.querySelectorAll(".logo");
         const title = document.querySelectorAll(".title");
         const subTitle = document.querySelectorAll(".subTitle");
         const note = document.querySelectorAll(".note");
@@ -35,26 +36,35 @@ function FirstPage() {
                     markers: false,
                 }
             });
+            TLFade.from(logo, {
+                ease: "elastic.out(8, .8)",
+                top: "10%",
+                rotate: 0,
+                duration: 1.5
+            })
+
+            TLFade.from(subTitle, {
+                autoAlpha: 0,
+                x: -820,
+                stagger: 0.1,
+                duration: 1.2,
+                ease: "power4.out",})
+
             TLFade.from(title, {
-                x: 820,
-                stagger: 0.2,
+                autoAlpha: 0,
+                y: -420,
+                stagger: 0.3,
+                duration: 0.9,
+                ease: "power2.out",
+            }, 0.3)
+            TLFade.from(note, {
+                autoAlpha: 0,
+                x: -420,
+                stagger: 0.3,
                 duration: 0.6,
                 ease: "power2.out",
-            }, "-=0.1")
-              .from(subTitle, {
-                  autoAlpha: 0,
-                  y: -220,
-                  stagger: 0.1,
-                  duration: 0.5,
-                  ease: "power2.out",
-              })
-              .from(note, {
-                  autoAlpha: 0,
-                  x: 420,
-                  stagger: 0.3,
-                  duration: 0.9,
-                  ease: "power2.out",
-              })
+            }, 0.3)
+
         };
 
         if(location.hash === "#firstPage") {
@@ -69,7 +79,7 @@ function FirstPage() {
     return (
       <div className="first-container">
           <img className='background' src={BG} alt="" />
-          <div className="alo">
+          <div className="logo">
               <h3>maxius</h3>
           </div>
           {
