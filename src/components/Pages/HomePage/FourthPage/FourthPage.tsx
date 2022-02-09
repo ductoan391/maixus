@@ -47,6 +47,7 @@ function FourthPage() {
         ]
     };
     useEffect(() => {
+        const logo = document.querySelector('.logo');
         const title = document.querySelector('.fourth-title');
         const navItems = document.querySelectorAll('.list-story');
         const animation = () => {
@@ -58,11 +59,16 @@ function FourthPage() {
 
                 }
             });
-            TLFade.from(title, {
+            TLFade.from(logo, {
                 y: -1000,
-                duration: 1.3,
+                duration: 0.8,
                 ease: "power2.out",
             }, "-=0.1")
+                .from(title, {
+                    y: -1000,
+                    duration: 1.3,
+                    ease: "power2.out",
+                })
                 .from(navItems, {
                     x: -2020,
                     stagger: 0.2,
@@ -94,6 +100,9 @@ function FourthPage() {
     ))
     return (
         <div className="fourth-page">
+            <div className='logo'>
+                <h3>maxius</h3>
+            </div>
             <div className='fourth-container'>
                 <h1 className="fourth-title">story</h1>
                 <div className="list-story">
