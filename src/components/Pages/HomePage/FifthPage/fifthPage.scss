@@ -1,5 +1,5 @@
 .fifth-container {
-    background-image: url(../../../../Assets/Images/bg_fifthPage.png);
+    background-image: url(../../../../Assets/Images/banner-05.png);
     height: 100vh;
     margin: 0 auto;
     background-size: cover;
@@ -10,9 +10,11 @@
     .one {
         position: absolute;
         top: 10%;
-        left: 10%;
+        left: 5%;
         h3 {
             color: white;
+            text-transform: uppercase;
+            font-size: 20.5px;
         }
     }
     .fifth-wrapper {
@@ -26,19 +28,21 @@
             width: 80%;
             margin-bottom: 50px;
             h3 {
-                font-size: 34px;
+                font-size: 39.5px;
                 font-weight: bold;
                 color: white;
                 margin-bottom: 0;
             }
             a {
                 color: white;
+                text-decoration: none;
                 p {
                     color: #cacaca;
                     z-index: 99;
                     position: relative;
                     margin: 0;
                     padding: 5px 20px;
+                    font-size: 19.5px;
                 }
             }
             .learn-more {

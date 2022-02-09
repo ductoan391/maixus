@@ -78,21 +78,25 @@ section {
   right: 0;
   width: 7px;
   height: 7px;
-  background-color: #fff;
+  background-color: #000;
 }
 .menu_nav button:hover:before {
   width: 30px;
+  background-color: #ff9933;
 }
 
 .menu_nav button.active {
-  background-color: #000;
+  background-color: #ff9933;
 }
 
 .menu_nav .active:before {
-  background-color: #000;
+  background-color: #ff9933;
   width: 25px;
 }
-
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url('./Assets/fonts/Roboto-Bold.ttf');
+}
 @media screen and (max-width: 840px) {
   .menu_nav .active:before {
     width: 10px;

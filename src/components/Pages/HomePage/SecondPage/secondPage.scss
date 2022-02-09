@@ -1,5 +1,5 @@
 .second-container {
-    background: url("../../../../Assets/Images/bg_second.png") no-repeat center;
+    background: url("../../../../Assets/Images/banner-02-kr.png") no-repeat center;
     position: relative;
     height: 100vh;
     display: flex;
@@ -10,117 +10,92 @@
     overflow: hidden;
     .first_content {
         position: absolute;
-        top: 10%;
-        left: 17%;
+        top: 50px;
+        left: 100px;
         color: #fff;
-        font-family: 'Montserrat-Medium';
+        font-family: "Roboto";
         p {
             line-height: 24px;
             font-weight: 600;
-            font-size: 13px;
+            font-size: 24px;
         }
     }
-    .second_content {
-        color: #fff;
-        animation: fadeIn2 1s ease;
-        text-align: center;
-        p {
-            font-size: 126px;
-            line-height: 135px;
+    .text-area {
+        line-height: 95px;
+        color: white;
+        max-width: 1500px;
+        line-height: 1.18;
+        font-size: 67px;
+        font-weight: bold;
+        .text {
+            letter-spacing: 5px;
+            font-size: 67px;
+            font-weight: bold;
+            color: white;
+        }
+        .text-yellow {
+            font-size: 67px;
+            color: #ff9933;
             font-weight: bold;
         }
     }
 }
-@media screen and (max-width: 1750px) and (min-width: 1539px) {
-    .second-container{
-        .second_content{
-            p{
-                font-size: 100px;
-                line-height: 8.5rem;
-            }
-        }
-    }
-}
-@media screen and (max-width: 1540px) and (min-width: 1340px) {
-    .second-container{
-        .second_content{
-            p{
-                font-size: 80px;
-                line-height: 7.5rem;
-            }
-        }
-    }
-}
-@media screen and (max-width: 1339px) and (min-width:  988px) {
-    .second-container{
-        .second_content{
-            p{
-                font-size: 60px;
-                line-height: 5.5rem;
-            }
-        }
-    }
-}
-@media screen and (max-width: 987px) and (min-width:  830px){
-    .second-container{
-        .second_content{
-            p{
-                font-size: 50px;
-                line-height: 4.5rem;
-            }
-        }
-    }
-}
-@media screen and (max-width: 829px) and (min-width: 687px) {
-    .second-container{
-        .second_content{
-            p{
-                font-size: 35px;
-                line-height: 3.5rem;
-            }
-        }
-    }
-}
-@media screen and (max-width: 686px) and (min-width: 484px) {
-    .second-container{
-        .second_content{
-            p{
-                font-size: 22px;
-                line-height: 3.5rem;
-            }
-        }
-    }
-}
-@media screen and (max-width: 483px) {
-    .second-container{
-        .second_content{
-            p{
-                font-size: 19px;
-                line-height: 3.5rem;
-            }
-        }
-    }
-}
-@media (max-width: 687px){
-    .second-container{
-        .first_content {
-            left: 15%;
-           p{
-                font-size: 11px;
-           }
 
+@media screen and (max-width: 1540px) and (min-width: 988px) {
+    .second-container {
+        .text-area {
+            color: white;
+            max-width: 900px;
+            .text {
+                letter-spacing: 3px;
+                font-size: 40px;
+                font-weight: bold;
+            }
+            .text-yellow {
+                font-size: 40px;
+                color: #ff9933;
+                font-weight: bold;
+            }
         }
     }
 }
-@media (max-width: 1025px){
-    .second-container{
-        background-size: 141%;
-        background-position: 0px 0px;
+
+@media screen and (max-width: 987px) and (min-width: 584px) {
+    .second-container {
+        .text-area {
+            color: white;
+            line-height: 50px;
+            max-width: 500px;
+            .text {
+                letter-spacing: 3px;
+                font-size: 25px;
+                font-weight: bold;
+            }
+            .text-yellow {
+                font-size: 25px;
+                color: #ff9933;
+                font-weight: bold;
+            }
+        }
     }
 }
-@media (max-width: 576px){
-    .second-container{
-        background-size: 250%;
-        background-position: 31px 50%;
+
+@media screen and (max-width: 483px) {
+    .second-container {
+        .text-area {
+            line-height: 0.5;
+            color: white;
+            max-width: 300px;
+            .text {
+                letter-spacing: 2px;
+                font-size: 20px;
+                font-weight: bold;
+            }
+            .text-yellow {
+                font-size: 20px !important;
+                color: #ff9933;
+                font-weight: bold;
+            }
+        }
     }
 }
