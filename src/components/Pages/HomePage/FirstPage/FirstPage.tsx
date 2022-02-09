@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import BG from '../../../../Assets/Images/banner-01-kr.png';
 import {useTranslation} from "react-i18next";
 import i18n from "../../../../i18n";
+import { useLocation } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,6 +19,8 @@ function FirstPage() {
     const dataList = t("first", { returnObjects: true }) as TranslateProps;
 
 
+    const location = useLocation();
+
 
     useEffect(() => {
         const title = document.querySelectorAll(".title");
@@ -26,7 +29,6 @@ function FirstPage() {
         const animation = () => {
             const TLFade = gsap.timeline({
                 scrollTrigger: {
-                    trigger: ".first-container",
                     start: "top top+=50",
                     end: "bottom bottom-=50",
                     toggleActions: "restart reverse restart reverse",
@@ -55,8 +57,12 @@ function FirstPage() {
               })
         };
 
-        animation();
-    }, []);
+        if(location.hash === "#firstPage") {
+        
+            animation();
+        }
+        return
+    }, [location.hash === '#firstPage']);
 
 
 

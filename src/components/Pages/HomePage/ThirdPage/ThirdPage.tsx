@@ -5,9 +5,11 @@ import { gsap } from 'gsap';
 import SectionCard from "./SectionCard";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useTranslation } from "react-i18next";
+import { useLocation } from 'react-router-dom';
 gsap.registerPlugin(ScrollTrigger)
 
 function ThirdPage() {
+    const location = useLocation();
     const { t } = useTranslation();
     const dataList = t("third", { returnObjects: true }) as any;
     // @ts-ignore
@@ -24,6 +26,7 @@ function ThirdPage() {
         const revealAnim = () => {
             const TLFade = gsap.timeline({
                 scrollTrigger: {
+
                     trigger: ".third-page",
                     start: "top top+=50",
                     end: "bottom bottom-=50",
@@ -54,8 +57,12 @@ function ThirdPage() {
                     ease: "power3.out",
                 })
         }
-        revealAnim();
-    }, []);
+        if (location.hash === "#thirdPage") {
+
+            revealAnim();
+        }
+        return
+    }, [location.hash === '#thirdPage']);
 
     return (
         <div className='third-page' ref={el => app = el}>
