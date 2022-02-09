@@ -176,6 +176,7 @@
         flex-direction: column;
         right: 0;
         height: 100%;
+        
         margin-left: -475px;
         box-sizing: border-box;
         top: 0;
@@ -231,19 +232,27 @@
     }
 
     .info-wrapper {
-        border-top: 3px solid #fff;
         font-weight: 300;
         font-size: 12px;
         color: #ffffff;
         font-family: $primary-font;
         margin-top: auto;
+        &::before {
+            content: '';
+            display: block;
+            width: 394px;
+            height: 2px;
+            background-color: #ffffff;
+            margin-top: 10px;
+        }
 
         #address {
             padding-top: 40px;
             padding-bottom: 20px;
         }
         p {
-            font-size: 12px;
+            font-size: 13px;
+            line-height: 1.5;
         }
 
         .link {
@@ -252,7 +261,7 @@
             a {
                 color: #ffffff;
                 font-weight: 300;
-                font-size: 12px;
+                font-size: 13px;
                 line-height: 1;
             }
         }
@@ -301,6 +310,9 @@
     .disable {
         display: none;
     }
+    .ko-font {
+        font-family: $secondary-font;
+    }
 }
 
 @media screen and (min-width: 1024.1px) {
@@ -308,6 +320,7 @@
         right: 18%;
     }
     #menu {
+        width: 532px !important;
         .list {
             li {
                 font-size: 39.5px !important;
@@ -333,9 +346,11 @@
         }
         .info-wrapper {
             width: 80%;
+            &::before {
+                width: auto;
+            }
             #address {
                 font-size: 14px;
-                line-height: 20px;
             }
         }
     }

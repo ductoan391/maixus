@@ -144,7 +144,7 @@ const SideMenu = () => {
                                 <li>Contact</li>
                             </NavLink>
                             <div className="info-wrapper">
-                                <p id="address">
+                                <p id="address" className={selected=== 'ko'? 'ko-font': ''}>
                                     {t('address')}
                                     <br />
                                     Tel 02. 851. 2662/ Fax 02. 851. 2662
