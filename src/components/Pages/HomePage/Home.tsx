@@ -16,41 +16,9 @@ import ReactFullpage from "@fullpage/react-fullpage";
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 const Home = () => {
-  const [destination, setDestination] = useState('');
-  // set change URL khen scrolling
-  let navigate = useNavigate();
-  const [activeUrl, setActiveUrl] = useState<Number>(0);
-  const handleUrl = () => {
-    switch (activeUrl) {
-      case 0:
-        navigate("#firstPage");
-        break;
-      case 1:
-        navigate("#secondPage");
-        break;
-      case 2:
-        navigate("#thirdPage");
-        break;
-      case 3:
-        navigate("#fourthPage");
-        break;
-      case 4:
-        navigate("#fifthPage");
-        break;
-    }
-  };
-  useEffect(() => {
   
-  }, [destination]);
-
-  //set up animation scroll to section
 
 
-  //variable for array menu_nav
-  let array: any[];
-  array = Array(5).fill(0);
-
- 
 
   const anchors = ["#firstPage", "#secondPage", "#thirdPage", "#fourthPage", "#fifthPage"];
 
