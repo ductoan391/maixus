@@ -4,6 +4,17 @@
     background-color: #fff;
     position: relative;
     overflow-y: hidden;
+    .logo{
+        position: absolute;
+        top: 50px;
+        left: 100px;
+        h3{
+            color: #222222;
+            text-transform: uppercase;
+            font-size: 21px;
+            font-family: 'Roboto-Bold';
+        }
+    }
 }
 .fourth-container {
     position: absolute;
@@ -20,12 +31,13 @@
     user-select: none;
 
     h1 {
-        font-size: 80px;
+        font-size: 98.5px;
         font-weight: bold;
         margin-bottom: 40px;
         text-align: center;
         text-transform: uppercase;
         font-family: 'Roboto-Bold';
+        letter-spacing: 4.93px;
     }
     .list-story{
         position: relative;
@@ -65,8 +77,9 @@
             padding: 10px 15px;
             h2,
             p {
-                font-size: 12px;
+                font-size: 13px;
                 margin-bottom: 3px;
+                letter-spacing: 0.65px;
             }
             h2 {
                 font-weight: bold;
@@ -87,8 +100,8 @@
         .item-story {
             text-align: left;
             .title {
-                font-size: 35px;
-                font-weight: bold;
+                font-size: 39.5px;
+                font-family: 'Roboto-Bold';
                 padding-left: 10px;
                 margin-bottom: 0;
                 transform: none !important;
@@ -114,5 +127,20 @@
             font-size: 30px;
             font-weight: bold;
         }
+        .item-story{
+            .title{
+                font-size: 25px !important;
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .fourth-page{
+        .logo{
+            left: 5% !important;
+        }
+    }
+    .fourth-container{
+        top: 60% !important;
     }
 }
