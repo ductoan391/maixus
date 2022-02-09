@@ -41,8 +41,7 @@ function SecondPage() {
                     ease: "power2.out",
                 });
         };
-        if(location.hash === "#secondPage") {
-
+        if (location.hash === "#secondPage") {
             animation();
             setLanguage(i18n.language);
         }

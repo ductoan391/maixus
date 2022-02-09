@@ -26,7 +26,6 @@ function ThirdPage() {
         const revealAnim = () => {
             const TLFade = gsap.timeline({
                 scrollTrigger: {
-
                     trigger: ".third-page",
                     start: "top top+=50",
                     end: "bottom bottom-=50",

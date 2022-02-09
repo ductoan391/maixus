@@ -23,7 +23,7 @@ const Home = () => {
             navigation
             navigationTooltips={anchors}
             scrollingSpeed={700}
-            onLeave={(origin, destination, direction) => {}}
+            onLeave={(origin, destination, direction) => { }}
             render={() => {
                 return (
                     <>
