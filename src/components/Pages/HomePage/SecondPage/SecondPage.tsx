@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useTranslation } from 'react-i18next';
 import i18n from '../../../../i18n';
 import { useLocation } from 'react-router-dom';
+import { clamp } from 'gsap-trial/src/all';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -28,17 +29,17 @@ function SecondPage() {
                 }
             });
             TLFade.from(firstContent, {
-                y: -50,
-                stagger: 0.1,
-                duration: 0.5,
+                ease: "elastic.out(8, .8)",
+                top: "10%",
+                rotate: 0,
+                duration: 1.5
+            })
+            TLFade.from(textArea, {
+                x: -3000,
+                stagger: 0.2,
+                duration: 0.8,
                 ease: "power2.out",
-            }, "-=0.1")
-                .from(textArea, {
-                    x: -3000,
-                    stagger: 0.2,
-                    duration: 0.8,
-                    ease: "power2.out",
-                });
+            });
         };
         if (location.hash === "#secondPage") {
             animation();

@@ -60,7 +60,7 @@ function FourthPage() {
             });
             TLFade.from(title, {
                 y: -1000,
-                duration: 0.6,
+                duration: 1.3,
                 ease: "power2.out",
             }, "-=0.1")
                 .from(navItems, {
