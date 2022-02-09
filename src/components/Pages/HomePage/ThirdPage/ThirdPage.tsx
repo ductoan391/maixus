@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useLayoutEffect } from 'react';
 import BG from '../../../../Assets/Images/banner-03.png'
 import './thirdPage.scss'
 import { gsap } from 'gsap';
@@ -15,7 +15,7 @@ function ThirdPage() {
     // @ts-ignore
     let section: HTMLDivElement | null = useRef(null);
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         const motionSection = section?.children[0];
         const designSection = section?.children[1];
         const developSection = section?.children[2];
@@ -25,13 +25,11 @@ function ThirdPage() {
             const TLFade = gsap.timeline({
                 scrollTrigger: {
                     trigger: '.third-page',
-
                     toggleActions: 'restart reverse restart reverse',
                     markers: false
                 },
             })
             gsap.to(app, 0, { css: { visibility: 'visible' } })
-
             // @ts-ignore
             TLFade.from(motionSection, {
                 autoAlpha: 0,
