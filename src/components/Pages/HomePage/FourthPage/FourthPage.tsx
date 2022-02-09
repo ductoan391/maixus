@@ -59,9 +59,8 @@ function FourthPage() {
                 }
             });
             TLFade.from(title, {
-                autoAlpha: 0,
-                y: -220,
-                duration: .8,
+                y: -1000,
+                duration: 0.6,
                 ease: "power2.out",
             }, "-=0.1")
                 .from(navItems, {
@@ -71,7 +70,7 @@ function FourthPage() {
                     ease: "power2.out",
                 })
         }
-        if(location.hash === '#fourthPage') {
+        if (location.hash === '#fourthPage') {
 
             animation();
         }

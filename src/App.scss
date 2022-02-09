@@ -93,7 +93,10 @@ section {
   background-color: #ff9933;
   width: 25px;
 }
-
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url('./Assets/fonts/Roboto-Bold.ttf');
+}
 @media screen and (max-width: 840px) {
   .menu_nav .active:before {
     width: 10px;
