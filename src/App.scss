@@ -51,13 +51,14 @@ section {
     margin: 0 0 100px !important;
     background-color: #f93;
     border-radius: 0 !important;
-    transform: translate(-78%, -50%);
+    transform: translate(-78%, -21%);
 }
 #fp-nav ul li a span, .fp-slidesNav ul li a span {
   width: 9px !important;
   height: 9px !important;
   border-radius: 0% !important;
   &:hover {
+    transform: translate(0%, 0%);
     transform-origin: right;
     transform: scaleX(calc(10 / 3));
     height: 9px!important;
