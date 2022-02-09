@@ -6,9 +6,11 @@ import "./fourthPage.scss"
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
 gsap.registerPlugin(ScrollTrigger);
 
 function FourthPage() {
+    const location = useLocation()
     const { t } = useTranslation();
     const data = t('fourth', { returnObjects: true }) as any;
     var settings = {
@@ -50,7 +52,6 @@ function FourthPage() {
         const animation = () => {
             const TLFade = gsap.timeline({
                 scrollTrigger: {
-                    trigger: ".fourth-page",
                     start: "top top+=50",
                     end: "bottom bottom-=50",
                     toggleActions: "restart reverse restart reverse",
@@ -70,8 +71,12 @@ function FourthPage() {
                     ease: "power2.out",
                 })
         }
-        animation();
-    }, [])
+        if(location.hash === '#fourthPage') {
+
+            animation();
+        }
+        return
+    }, [location.hash === '#fourthPage']);
     const renderData = data.story.map((val: any) => (
         <div className={"item-story item-" + (val.title)} key={val.id}>
             <p className={"title title" + (val.title)}>{val.title}</p>

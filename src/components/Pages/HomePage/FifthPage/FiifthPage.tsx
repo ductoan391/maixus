@@ -3,8 +3,10 @@ import './fifthPage.scss';
 import { gsap } from "gsap";
 import { RightOutlined } from '@ant-design/icons'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useLocation } from 'react-router-dom';
 gsap.registerPlugin(ScrollTrigger);
 function FiifthPage() {
+    const location = useLocation()
     useEffect(() => {
         const titleName = document.querySelectorAll(".fifth-name");
         const titleAnim = document.querySelectorAll(".title-anima");
@@ -13,7 +15,6 @@ function FiifthPage() {
         const animation = () => {
             const TLFade = gsap.timeline({
                 scrollTrigger: {
-                    trigger: ".fifth-container",
                     start: "top top+=50",
                     end: "bottom bottom-=50",
                     toggleActions: "restart reverse restart reverse",
@@ -46,8 +47,12 @@ function FiifthPage() {
 
         };
 
-        animation();
-    }, []);
+        if (location.hash === "#fifthPage") {
+
+            animation();
+        }
+        return
+    }, [location.hash === '#fifthPage']);
     return (
         <div className='fifth-container'>
             <div className="one fifth-contact">

@@ -4,6 +4,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useTranslation } from 'react-i18next';
 import i18n from '../../../../i18n';
+import { useLocation } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,6 +13,7 @@ function SecondPage() {
     const dataList = t('second', { returnObjects: true }) as any;
 
     const [language, setLanguage] = useState(i18n.language);
+    const location = useLocation();
 
     useLayoutEffect(() => {
         const textArea = document.querySelectorAll('.text-area');
@@ -19,7 +21,6 @@ function SecondPage() {
         const animation = () => {
             const TLFade = gsap.timeline({
                 scrollTrigger: {
-                    trigger: ".second-container",
                     start: "top top+=50",
                     end: "bottom bottom-=50",
                     toggleActions: "restart reverse restart reverse",
@@ -40,9 +41,13 @@ function SecondPage() {
                     ease: "power2.out",
                 });
         };
-        animation();
-        setLanguage(i18n.language);
-    }, [i18n.language]);
+        if(location.hash === "#secondPage") {
+
+            animation();
+            setLanguage(i18n.language);
+        }
+        return
+    }, [i18n.language, location.hash === '#secondPage']);
 
 
     return (
