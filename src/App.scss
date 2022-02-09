@@ -47,28 +47,35 @@ section {
 .fp-slidesNav ul li:hover a.active span,
 .fp-slidesNav ul li a.active span {
     width: 30px !important;
-    height: 11px !important;
+    height: 9px !important;
     margin: 0 0 100px !important;
     background-color: #f93;
     border-radius: 0 !important;
     transform: translate(-78%, -50%);
 }
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+  width: 9px !important;
+  height: 9px !important;
+  border-radius: 0% !important;
+  &:hover {
+    transform-origin: right;
+    transform: scaleX(calc(10 / 3));
+    height: 9px!important;
+}
+}
 #fp-nav ul li a,
 .fp-slidesNav ul li a {
-    display: block;
-    position: relative;
-    z-index: 1;
-    cursor: pointer;
-    text-decoration: none;
+    display: none;
     width: 9px !important;
     height: 9px !important;
-    margin: 7px 0 7px 21px;
-    background-color: #222;
+    
+  }
+  #fp-nav ul li {
+    
+    width: 9px !important;
+    height: 9px !important;
 }
-#fp-nav ul li a span,
-.fp-slidesNav ul li a span {
-    border-radius: 0% !important ;
-}
+
 #fp-nav.fp-right {
     right: 100px !important;
 }
