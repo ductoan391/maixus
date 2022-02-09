@@ -26,34 +26,34 @@ function ThirdPage() {
         const revealAnim = () => {
             const TLFade = gsap.timeline({
                 scrollTrigger: {
-                    toggleActions: 'restart reverse restart reverse',
-                    markers: false
+
+                    trigger: ".third-page",
+                    start: "top top+=50",
+                    end: "bottom bottom-=50",
+                    toggleActions: "restart reverse restart reverse",
+                    markers: false,
                 },
             })
             gsap.to(app, 0, { css: { visibility: 'visible' } })
             // @ts-ignore
             TLFade.from(motionSection, {
-                autoAlpha: 0,
-                y: -220,
-                duration: .5,
+                y: 420,
+                duration: 0.5,
                 ease: "power3.out",
             })// @ts-ignore
                 .from(designSection, {
-                    autoAlpha: 0,
-                    y: 220,
-                    duration: .5,
+                    y: -420,
+                    duration: 0.5,
                     ease: "power3.out",
                 })// @ts-ignore
                 .from(developSection, {
-                    autoAlpha: 0,
-                    y: -220,
-                    duration: .5,
+                    y: 620,
+                    duration: 0.5,
                     ease: "power3.out",
                 })// @ts-ignore
                 .from(cultureSection, {
-                    autoAlpha: 0,
-                    y: 220,
-                    duration: .5,
+                    y: -420,
+                    duration: 0.5,
                     ease: "power3.out",
                 })
         }
