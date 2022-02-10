@@ -11,6 +11,8 @@ import FourthPage from './FourthPage/FourthPage';
 import FiifthPage from './FifthPage/FiifthPage';
 import 'fullpage.js/vendors/scrolloverflow'; // Optional. When using scrollOverflow:true
 import ReactFullpage from '@fullpage/react-fullpage';
+import onLeave from '../../Animation/onLeave';
+import afterLoad from '../../Animation/AfterLoad';
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
@@ -19,63 +21,12 @@ const Home = () => {
 
     return (
         <ReactFullpage
+        licenseKey={'263DXXXX-B839XXXX-AE67XXXX-F398XXXX'}
             anchors={anchors}
             navigation
             scrollingSpeed={700}
-            afterLoad={(origin, destination, direction) => {
-                switch (destination.index) {
-                    case 2:
-                        gsap.from(".title_first", {
-                            autoAlpha: 0,
-                            y: 420,
-                            duration: 0.7,
-                            ease: "power4.out",
-                        });
-                        gsap.from(".page-three-content", {
-                            autoAlpha: 0,
-                        });
-                        gsap.from(".title_second", {
-                            autoAlpha: 0,
-                            y: -420,
-                            duration: 0.7,
-                            ease: "power4.out",
-                            delay: 0.3,
-                        });
-                        gsap.from(".title_third", {
-                            autoAlpha: 0,
-                            y: 420,
-                            duration: 0.7,
-                            ease: "power4.out",
-                            delay: 0.6,
-                        });
-                        gsap.from(".title_fourth", {
-                            autoAlpha: 0,
-                            y: -420,
-                            duration: 0.7,
-                            ease: "power4.out",
-                            delay: 0.9,
-                        });
-                        break;
-                }
-            }}
-            onLeave={(origin, destination, direction) => {
-                switch (destination.index) {
-                    case 1:
-                        gsap.to(".title_first", { visibility: "hidden" });
-                        gsap.to(".title_second", { visibility: "hidden" });
-                        gsap.to(".title_third", { visibility: "hidden" });
-                        gsap.to(".title_fourth", { visibility: "hidden" });
-                        gsap.to(".page-three-content", { visibility: "hidden" });
-                        break;
-                    case 3:
-                        gsap.to(".title_first", { visibility: "hidden" });
-                        gsap.to(".title_second", { visibility: "hidden" });
-                        gsap.to(".title_third", { visibility: "hidden" });
-                        gsap.to(".title_fourth", { visibility: "hidden" });
-                        gsap.to(".page-three-content", { visibility: "hidden" });
-                        break;
-                }
-            }}
+            onLeave={onLeave}
+            afterLoad={afterLoad}
             render={() => {
                 return (
                     <>
