@@ -1,4 +1,4 @@
-@import '../../../../Assets/Style/Varialble.scss';
+@import "../../../../Assets/Style/Varialble.scss";
 
 .first-container {
     height: 100vh;
@@ -16,7 +16,9 @@
         top: 50px;
         //left: 100px;
         h3 {
-            color: black;
+            color: #222;
+            font-family: "Roboto-bold";
+            font-size: 21px;
             text-transform: uppercase;
         }
     }
@@ -43,34 +45,29 @@
         }
     }
     .content-container.en {
-        .subTitle, .note {
-
+        .subTitle,
+        .note {
             font-family: "Roboto Light", sans-serif;
-
         }
     }
     .content-container.ko {
-        .subTitle, .note {
+        .subTitle,
+        .note {
             font-family: noto-sans-cjk-kr, sans-serif;
         }
-
     }
 }
 
-
 @media (max-width: 600px) {
-
     .content-container {
         .subTitle {
             width: 20%;
         }
         .note {
-
         }
     }
 }
 @media (max-width: 800px) {
-
     .content-container {
         .subTitle {
             width: 35%;
@@ -81,13 +78,11 @@
     }
 }
 @media (max-width: 768px) {
-
     .content-container {
         .subTitle {
             width: 70%;
         }
         .note {
-
         }
     }
 }
@@ -99,7 +94,8 @@
     .content-container {
         padding-left: 15%;
         width: 40%;
-        .subTitle, .note {
+        .subTitle,
+        .note {
             width: 70%;
         }
         .note {
@@ -110,7 +106,6 @@
 @media (min-width: 1025px) {
     .logo {
         left: 100px;
-
     }
     .content-container {
         width: 30%;
