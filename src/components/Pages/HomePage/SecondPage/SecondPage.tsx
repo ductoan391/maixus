@@ -1,18 +1,13 @@
 import React, { useLayoutEffect, useState } from 'react';
 import './secondPage.scss';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useTranslation } from 'react-i18next';
 import i18n from '../../../../i18n';
 import { useLocation } from 'react-router-dom';
-import { clamp } from 'gsap-trial/src/all';
-
-gsap.registerPlugin(ScrollTrigger);
 
 function SecondPage() {
     const { t } = useTranslation();
     const dataList = t('second', { returnObjects: true }) as any;
-
     const [language, setLanguage] = useState(i18n.language);
     const location = useLocation();
 
