@@ -75,7 +75,7 @@
         }
 
         &.select {
-            color: #ff9933;
+            color: #ff9933!important;
             font-size: larger;
         }
     }
@@ -131,7 +131,6 @@
         margin-bottom: 7.5px;
         position: relative;
 
-        background: #222;
 
         z-index: 1;
 
@@ -154,7 +153,7 @@
         opacity: 1;
 
         transform: rotate(45deg) translate(-2px, -1px);
-        background: #fff;
+        background: #fff!important;
     }
 
     #side-menu-toggle input:checked ~ span:nth-last-child(3) {
