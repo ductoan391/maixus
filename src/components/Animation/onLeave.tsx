@@ -3,20 +3,20 @@ const onLeave = (origin: any, destination: any, direction: any) => {
     switch (destination.index) {
         case 0:
             gsap.to(".second-page-container", { visibility: "hidden" });
-            gsap.from(".md-text", {
+            gsap.from(".title", {
                 autoAlpha: 0,
                 y: -980,
                 duration: 1,
                 ease: "power4.out",
             });
-            gsap.from(".text-decs", {
+            gsap.from(".subTitle", {
                 autoAlpha: 0,
                 x: -280,
                 duration: 1,
                 ease: "power4.out",
                 delay: 0.7,
             });
-            gsap.from(".text-bottom", {
+            gsap.from(".note", {
                 autoAlpha: 0,
                 x: -780,
                 duration: 1.2,

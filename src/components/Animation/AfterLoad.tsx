@@ -16,14 +16,14 @@ const afterLoad = (origin: any, destination: any, direction: any) => {
             });
             break;
         case 2:
+            gsap.from(".page-three-content", {
+                autoAlpha: 0,
+            });
             gsap.from(".title_first", {
                 autoAlpha: 0,
                 y: 420,
                 duration: 0.7,
                 ease: "power4.out",
-            });
-            gsap.from(".page-three-content", {
-                autoAlpha: 0,
             });
             gsap.from(".title_second", {
                 autoAlpha: 0,
