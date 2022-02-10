@@ -8,6 +8,7 @@
     align-items: center;
     font-family: $primary-font;
     font-weight: 100;
+    z-index: 1000;
 
     &-change-lang-wrapper {
         display: flex;
@@ -24,7 +25,7 @@
     }
 
     &-change-lang-menu-item {
-        color: #9c9c9c;
+        color: #ffffff;
         height: 30px;
         border: none;
         cursor: pointer;
@@ -53,14 +54,14 @@
     }
 
     .change-lang {
-        color: #cdcdcd;
+        color: #222;
         width: 35px;
         height: 30px;
         border: none;
         cursor: pointer;
         background-color: Transparent;
         background-repeat: no-repeat;
-        font-size: 16px;
+        font-size: 21px !important;
         font-weight: 300;
         margin-top: 20px;
         text-align: center;
@@ -130,7 +131,7 @@
         margin-bottom: 7.5px;
         position: relative;
 
-        background: #cdcdcd;
+        background: #222;
 
         z-index: 1;
 
