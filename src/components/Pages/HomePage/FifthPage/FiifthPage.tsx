@@ -55,9 +55,7 @@ function FiifthPage() {
     // }, [location.hash === '#fifthPage']);
     return (
         <div className='fifth-container'>
-            <div className="one fifth-contact">
-                <h3>maxius</h3>
-            </div>
+        
             <div className="fifth-wrapper">
                 <div className="block-item">
                     <h3 className="fifth-name">Company.</h3>

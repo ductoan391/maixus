@@ -79,9 +79,7 @@ function FirstPage() {
     return (
       <div className="first-container">
           <img className='background' src={BG} alt="" />
-          <div className="logo">
-              <h3>maxius</h3>
-          </div>
+        
           {
               i18n.language === "ko" ? (
                 <div className='content-container ko'>
