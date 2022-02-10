@@ -47,12 +47,14 @@ section {
 .fp-slidesNav ul li:hover a.active span,
 .fp-slidesNav ul li a.active span {
     width: 30px !important;
-    height: 11px !important;
+    height: 9px !important;
     margin: 0 0 100px !important;
     background-color: #f93;
     border-radius: 0 !important;
-    transform: translate(-78%, -50%);
+    transform: translate(-78%, -21%);
+    
 }
+  
 #fp-nav ul li a,
 .fp-slidesNav ul li a {
     display: block;
@@ -60,15 +62,48 @@ section {
     z-index: 1;
     cursor: pointer;
     text-decoration: none;
-    width: 9px !important;
     height: 9px !important;
     margin: 7px 0 7px 21px;
     background-color: #222;
+    &:hover {
+      transition: 0.1s;
+      transform-origin: right;
+        transform: scaleX(calc(10 / 3));
+    }
 }
-#fp-nav ul li a span,
-.fp-slidesNav ul li a span {
-    border-radius: 0% !important ;
+#fp-nav ul li a.active {
+  transform: scaleX(calc(10 / 3));
+  transform-origin: right;
+  transition: 0.1s;
+  background-color: #f93!important;
+
 }
+#fp-nav ul li, .fp-slidesNav ul li {
+  display: block;
+  width: 9px!important;
+  height: 9px!important;
+  margin: 7px;
+  position: relative;
+}
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  height: 4px;
+  width: 4px;
+  border: 0;
+  background: #333;
+  left: 50%;
+  top: 50%;
+  margin: -2px 0 0 -2px;
+  display: none;
+  -webkit-transition: all .1s ease-in-out;
+  -moz-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+}
+
 #fp-nav.fp-right {
     right: 100px !important;
 }
