@@ -62,9 +62,7 @@ function FourthPage() {
     ))
     return (
         <div className="fourth-page">
-            <div className='logo'>
-                <h3>maxius</h3>
-            </div>
+           
             <div className='fourth-container'>
                 <h1 className="fourth-title">story</h1>
                 <div className="list-story">

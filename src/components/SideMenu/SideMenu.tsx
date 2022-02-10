@@ -1,7 +1,7 @@
 import { gsap } from 'gsap';
 import React, { useLayoutEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { NavLink, Route, Routes, useLocation } from 'react-router-dom';
+import { NavLink, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import arrow from '../../Assets/Images/arrow-icon.png';
 import i18n from '../../i18n';
 import Contact from '../Pages/Contact/Contact';
@@ -14,6 +14,7 @@ const SideMenu = () => {
     const [showItemProposal, setShowItemProposal] = useState<boolean>(false);
     const [colorMenu, setColorMenu] = useState<string>('#222');
     const location = useLocation();
+    const navigate = useNavigate();
   
     const { t } = useTranslation();
 
@@ -85,6 +86,15 @@ const SideMenu = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="contact" element={<Contact />} />
             </Routes>
+            <div className='maxius-logo'>
+                <a href="#firstPage" onClick={(e) => {
+                    if (location.pathname === "/") {
+                    } else {
+                        e.preventDefault();
+                        navigate("/");
+                    }
+                }} >MAXIUS</a>
+    </div>
             <div className="side-menu-container">
                 <nav role="navigation">
                     <div id="side-menu-toggle">
@@ -116,6 +126,8 @@ const SideMenu = () => {
                                     KR
                                 </div>
                             </div>
+                            <div className='title-list'>
+
                             <NavLink className="list" to="/" onClick={() => handleClickHome()}>
                                 <li>Home</li>
                             </NavLink>
@@ -156,6 +168,7 @@ const SideMenu = () => {
                             <NavLink className="list" to="/contact" onClick={() => handleClickHome()}>
                                 <li>Contact</li>
                             </NavLink>
+                            </div>
                             <div className="info-wrapper">
                                 <p id="address" className={selected === 'ko' ? 'ko-font' : ''}>
                                     {t('address')}

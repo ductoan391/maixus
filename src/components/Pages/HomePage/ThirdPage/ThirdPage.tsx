@@ -8,7 +8,7 @@ function PageThree() {
 
     return (
         <div className="page-three">
-            <div className="logo">MAXIUS</div>
+          
             <div className="page-three-container">
                 <div className="page-three-content">
                     <div className="item">
