@@ -32,12 +32,12 @@ function SecondPage() {
                 ease: "elastic.out(8, .8)",
                 top: "10%",
                 rotate: 0,
-                duration: 1.5
+                duration: 1.3
             })
             TLFade.from(textArea, {
                 x: -3000,
                 stagger: 0.2,
-                duration: 0.8,
+                duration: 0.5,
                 ease: "power2.out",
             });
         };
