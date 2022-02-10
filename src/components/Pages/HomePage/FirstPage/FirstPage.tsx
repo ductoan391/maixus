@@ -37,18 +37,18 @@ function FirstPage() {
                 }
             });
             TLFade.from(logo, {
-                ease: "elastic.out(8, .8)",
-                top: "10%",
-                rotate: 0,
-                duration: 1.5
-            })
+                autoAlpha: 0,
+                y: -820,
+                stagger: 0.1,
+                duration: 0.9,
+                ease: "power4.out",}, 0.3)
 
             TLFade.from(subTitle, {
                 autoAlpha: 0,
                 x: -820,
                 stagger: 0.1,
-                duration: 1.2,
-                ease: "power4.out",})
+                duration: 0.9,
+                ease: "power4.out",}, 0.6)
 
             TLFade.from(title, {
                 autoAlpha: 0,

@@ -21,11 +21,11 @@ const Home = () => {
         <ReactFullpage
             anchors={anchors}
             navigation
-            navigationTooltips={anchors}
+            // navigationTooltips={anchors}
             scrollingSpeed={700}
             afterLoad={(origin,destination,direction) => {
                 switch (destination.index) {
-                    case 2: 
+                    case 2:
                     gsap.from(".title_first", {
                         autoAlpha: 0,
                         y: 420,
@@ -61,14 +61,14 @@ const Home = () => {
             }}
             onLeave={(origin, destination, direction) => {
                 switch (destination.index) {
-                    case 1: 
+                    case 1:
                     gsap.to(".title_first", { visibility: "hidden" });
       gsap.to(".title_second", { visibility: "hidden" });
       gsap.to(".title_third", { visibility: "hidden" });
       gsap.to(".title_fourth", { visibility: "hidden" });
       gsap.to(".page-three-content", { visibility: "hidden" });
       break;
-      case 3: 
+      case 3:
       gsap.to(".title_first", { visibility: "hidden" });
       gsap.to(".title_second", { visibility: "hidden" });
       gsap.to(".title_third", { visibility: "hidden" });
