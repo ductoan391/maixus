@@ -45,7 +45,6 @@ const SideMenu = () => {
 
 
     useLayoutEffect(() => {
-        const brochureList = document.querySelectorAll('.brochure-list');
         const item1 = document.querySelectorAll('.item-1');
         const item2 = document.querySelectorAll('.item-2');
         const item3 = document.querySelectorAll('.item-3');
