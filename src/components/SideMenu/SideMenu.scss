@@ -13,14 +13,14 @@
     &-change-lang-wrapper {
         display: flex;
         position: absolute;
-        top: 10px;
+        top: 22px;
         right: -20px;
     }
 
     &-change-lang-menu {
         display: flex;
         position: absolute;
-        top: 50px;
+        top: 62px;
         right: 25px;
     }
 
@@ -96,7 +96,7 @@
     #side-menu-toggle {
         display: block;
         position: fixed;
-        top: 50px;
+        top: 49px;
         right: 100px;
 
         z-index: 1;
@@ -126,9 +126,9 @@
         */
     #side-menu-toggle span {
         display: block;
-        width: 35px;
-        height: 1px;
-        margin-bottom: 7.5px;
+        width: 41px;
+        height: 3px;
+        margin-bottom: 7px;
         position: relative;
 
 
@@ -199,20 +199,25 @@
         .list {
             transition: all 0.2s;
 
-            li {
+            &>li {
                 max-height: 60px;
                 color: white;
                 font-size: 20px;
+                font-weight: 300;
+                display: inline-block;
                 cursor: pointer;
+                &:hover {
+                    color: #ff9933;
+                }
             }
             &.select {
-                color: white;
-                font-weight: 200;
+                color: #ff9933;
+                font-weight: 300;
             }
         }
         .active {
             li {
-                color: white;
+                color: #ff9933;
             }
         }
     }
