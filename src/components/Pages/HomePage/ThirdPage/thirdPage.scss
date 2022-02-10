@@ -114,3 +114,151 @@
         }
     }
 }
+
+@media screen and (max-width: 1540px) and (min-width: 988px) {
+    .page-three {
+        .logo {
+            top: 25px;
+            left: 30px;
+            font-size: 18px;
+        }
+        &-content {
+            .item {
+                &-content {
+                    .title {
+                        font-size: 20px;
+                        @media screen and (max-width: 840px) {
+                            margin: 0;
+                            font-size: 18px;
+                        }
+                    }
+                    .desc {
+                        font-size: 15px;
+                        @media (max-width: 840px) {
+                            font-size: 13px;
+                            line-height: 23px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 987px) and (min-width: 840px) {
+    .page-three {
+        height: 100vh;
+        background: url("../../../../Assets//Images/banner-03.png");
+        user-select: none;
+        width: 100%;
+        background-size: cover;
+        overflow: hidden;
+        .logo {
+            position: absolute;
+            top: 50px;
+            left: 100px;
+            font-size: 21px;
+            font-family: "Roboto-bold";
+            font-weight: bold;
+            color: #fff;
+        }
+        @media screen and (max-width: 987px) and (min-width: 840px) {
+            background-size: cover;
+        }
+        .page-three-container {
+            top: 0;
+            position: absolute;
+            width: 70%;
+            color: #fff;
+            text-align: left;
+            height: 100%;
+            position: relative;
+            left: -3%;
+            right: 0;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            padding: 0;
+            z-index: 5;
+        }
+        &-content {
+            display: flex;
+            height: 100%;
+            width: 100%;
+            @media screen and (max-width: 987px) and (min-width: 840px) {
+                margin-top: 10vh;
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 10%;
+                left: 0;
+                transition: all 0.2s !important;
+                margin-top: 10vh;
+                &:hover {
+                    margin-top: 4vh;
+                }
+            }
+            .item {
+                height: 100%;
+                width: calc(100% / 4);
+                transition: all 0.2s !important;
+                padding: 0 30px;
+                box-sizing: border-box;
+                @media screen and (max-width: 987px) and (min-width: 840px) {
+                    width: 100%;
+                    height: 15%;
+                    padding: 20px 30px;
+                    overflow: hidden;
+                }
+                &-content {
+                    margin-top: 30vh;
+                    @media screen and (max-width: 987px) and (min-width: 840px) {
+                        margin-top: 0;
+                    }
+                    .title {
+                        width: 100%;
+                        margin-bottom: 5vh;
+                        word-break: keep-all;
+                        font-size: 33px;
+                        font-weight: 700;
+                        visibility: hidden;
+                        @media screen and (max-width: 987px) and (min-width: 840px) {
+                            margin: 0;
+                            font-size: 18px;
+                        }
+                    }
+                    .desc {
+                        opacity: 0;
+                        font-size: 19px;
+                        line-height: 27px;
+                        font-family: "Noto Sans KR";
+                        font-weight: 100;
+                        @media screen and (max-width: 987px) and (min-width: 840px) {
+                            font-size: 13px;
+                            line-height: 23px;
+                        }
+                    }
+                }
+                &:hover {
+                    width: 40%;
+                    background-color: rgba(77, 74, 73, 0.44);
+                    .desc {
+                        opacity: 1;
+                    }
+                    @media screen and (max-width: 987px) and (min-width: 840px) {
+                        width: 100%;
+                        overflow: unset;
+                        height: 40%;
+                    }
+                }
+            }
+            .item + .item {
+                @media screen and (max-width: 987px) and (min-width: 840px) {
+                    border-left: none;
+                    border-top: 1px solid rgba(255, 255, 255, 0.32);
+                }
+            }
+        }
+    }
+}
