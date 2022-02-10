@@ -1,4 +1,4 @@
-@import '../../../../Assets/Style/Varialble.scss';
+@import "../../../../Assets/Style/Varialble.scss";
 
 .first-container {
     height: 100vh;
@@ -32,15 +32,15 @@
         }
         .subTitle {
             margin-top: 0.8rem;
-            font-family: "Roboto Light", sans-serif;
+            font-family: "Roboto-Light", sans-serif;
             color: #222;
-            font-weight: 300;
+            font-weight: 100;
             text-align: left;
         }
         .note {
-            font-family: "Roboto Light", sans-serif;
+            font-family: "Roboto-Light", sans-serif;
             color: #222;
-            font-weight: 300;
+            font-weight: 100;
             text-align: left;
         }
     }
@@ -71,40 +71,33 @@
 }
 
 @media (max-width: 320px) {
-
     .content-container {
         .subTitle {
             width: 20%;
         }
         .note {
-
         }
     }
 }
 @media (max-width: 480px) {
-
     .content-container {
         .subTitle {
             width: 20%;
         }
         .note {
-
         }
     }
 }
 @media (max-width: 600px) {
-
     .content-container {
         .subTitle {
             width: 20%;
         }
         .note {
-
         }
     }
 }
 @media (max-width: 800px) {
-
     .content-container {
         .subTitle {
             width: 35%;
@@ -115,19 +108,16 @@
     }
 }
 @media (max-width: 768px) {
-
     .content-container {
         .subTitle {
             width: 70%;
         }
         .note {
-
         }
     }
 }
 
-@media (max-width: 1024px) and (min-width: 1024px){
-
+@media (max-width: 1024px) and (min-width: 1024px) {
     .content-container {
         .subTitle {
             width: 35%;
@@ -138,14 +128,13 @@
     }
 }
 @media (min-width: 1025px) {
-
     .content-container {
         .subTitle {
             width: 30%;
-            font-size: 1.2rem;
+            font-size: 20.5px;
         }
         .note {
-            font-size: 1.2rem;
+            font-size: 20.5px;
             margin-top: 4rem;
         }
     }
