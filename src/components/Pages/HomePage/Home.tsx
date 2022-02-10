@@ -21,7 +21,6 @@ const Home = () => {
         <ReactFullpage
             anchors={anchors}
             navigation
-            navigationTooltips={anchors}
             scrollingSpeed={700}
             afterLoad={(origin, destination, direction) => {
                 switch (destination.index) {

@@ -1,7 +1,7 @@
 import { gsap } from 'gsap';
 import React, { useLayoutEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { NavLink, Route, Routes } from 'react-router-dom';
+import { NavLink, Route, Routes, useLocation } from 'react-router-dom';
 import arrow from '../../Assets/Images/arrow-icon.png';
 import i18n from '../../i18n';
 import Contact from '../Pages/Contact/Contact';
@@ -12,6 +12,9 @@ const SideMenu = () => {
     const [selected, setSelected] = useState<'ko' | 'en'>('ko');
     const [showItemBrochure, setShowItemBrochure] = useState<boolean>(false);
     const [showItemProposal, setShowItemProposal] = useState<boolean>(false);
+    const [colorMenu, setColorMenu] = useState<string>('#222');
+    const location = useLocation();
+  
     const { t } = useTranslation();
 
     const [closeSideMenu, setCloseSideMenu] = useState<boolean>();
@@ -63,7 +66,17 @@ const SideMenu = () => {
         };
 
         revealAnim();
-    }, [showItemBrochure, showItemProposal]);
+        if(location.hash === '#secondPage' || location.hash === '#thirdPage' || location.hash === '#fifthPage') {
+            const el: any = document.querySelectorAll('#fp-nav ul li a');
+            el?.forEach(e => e?.classList.add('active-color-dot'));
+            setColorMenu('#fff');
+        }
+        else {
+            const el: any = document.querySelectorAll('#fp-nav ul li a');
+            el?.forEach(e => e?.classList.remove('active-color-dot'));
+            setColorMenu('#222');
+        }
+    }, [showItemBrochure, showItemProposal,location.hash]);
 
 
     return (
@@ -77,17 +90,17 @@ const SideMenu = () => {
                     <div id="side-menu-toggle">
                         <input type="checkbox" checked={closeSideMenu} onClick={() => setCloseSideMenu((prev) => !prev)} />
                         <div className="side-menu-container-change-lang-wrapper">
-                            <div className={`change-lang en ${selected === 'en' ? 'select' : ''}`} onClick={() => handleChangeLanguage('en')}>
+                            <div style={{color: colorMenu}} className={`change-lang en ${selected === 'en' ? 'select' : ''}`} onClick={() => handleChangeLanguage('en')}>
                                 EN
                             </div>
-                            <div className={`change-lang ko ${selected === 'ko' ? 'select' : ''}`} onClick={() => handleChangeLanguage('ko')}>
+                            <div style={{color: colorMenu}} className={`change-lang ko ${selected === 'ko' ? 'select' : ''}`} onClick={() => handleChangeLanguage('ko')}>
                                 KR
                             </div>
                         </div>
 
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                        <span style={{backgroundColor: colorMenu}}></span>
+                        <span style={{backgroundColor: colorMenu}}></span>
+                        <span style={{backgroundColor: colorMenu}}></span>
                         <ul id="menu">
                             <div className="side-menu-container-change-lang-menu">
                                 <div
