@@ -1,5 +1,5 @@
 import { gsap } from 'gsap';
-import React, { useEffect, useLayoutEffect, useState } from 'react';
+import React, { useLayoutEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import arrow from '../../Assets/Images/arrow-icon.png';
@@ -7,10 +7,9 @@ import i18n from '../../i18n';
 import Contact from '../Pages/Contact/Contact';
 import Home from '../Pages/HomePage/Home';
 import './SideMenu.scss';
-const test = require('../../Assets/Images/Test.docx');
 
 const SideMenu = () => {
-    const [selected, setSelected] = useState<'ko' | 'en'>('en');
+    const [selected, setSelected] = useState('en');
     const [showItemBrochure, setShowItemBrochure] = useState<boolean>(false);
     const [showItemProposal, setShowItemProposal] = useState<boolean>(false);
     const [colorMenu, setColorMenu] = useState<string>('#222');
@@ -21,16 +20,10 @@ const SideMenu = () => {
 
     const [closeSideMenu, setCloseSideMenu] = useState<boolean>();
 
-    const handleChangeLanguage = (lang: 'ko' | 'en') => {
-        if (lang === 'ko') {
-            i18n.changeLanguage('ko');
-            setSelected(lang);
-        } else {
-            i18n.changeLanguage(lang);
-            setSelected(lang);
-        }
+    const handleChangeLanguage = (lang: string) => {
+        i18n.changeLanguage(lang);
+        setSelected(lang);
     };
-
     const handleClickBrochure = () => {
         setShowItemProposal(false);
         setShowItemBrochure(!showItemBrochure);
@@ -43,9 +36,11 @@ const SideMenu = () => {
         setCloseSideMenu(false);
         setShowItemProposal(false);
         setShowItemBrochure(false);
-    };
+    }
+
 
     useLayoutEffect(() => {
+        const brochureList = document.querySelectorAll('.brochure-list');
         const item1 = document.querySelectorAll('.item-1');
         const item2 = document.querySelectorAll('.item-2');
         const item3 = document.querySelectorAll('.item-3');
@@ -53,31 +48,31 @@ const SideMenu = () => {
         const item5 = document.querySelectorAll('.item-5');
 
         const revealAnim = () => {
-            const TLFade = gsap.timeline({});
+            const TLFade = gsap.timeline({
 
-            TLFade.fromTo(item1, { y: '-100%', opacity: 0 }, { y: '0%', opacity: 1, duration: 0.1 });
-            TLFade.fromTo(item2, { y: '-100%', opacity: 0, delay: -0.1 }, { y: '0%', opacity: 1, duration: 0.1 });
-            TLFade.fromTo(item3, { y: '-100%', opacity: 0, delay: -0.2 }, { y: '0%', opacity: 1, duration: 0.1 });
-            TLFade.fromTo(item4, { y: '-100%', opacity: 0, delay: -0.3 }, { y: '0%', opacity: 1, duration: 0.1 });
-            TLFade.fromTo(item5, { y: '-100%', opacity: 0, delay: -0.4 }, { y: '0%', opacity: 1, duration: 0.1 });
+            });
+
+            TLFade.fromTo(item1, { y: '-100%', opacity: 0 }, { y: '0%', opacity: 1, duration: 0.1 })
+            TLFade.fromTo(item2, { y: '-100%', opacity: 0, delay: -0.1 }, { y: '0%', opacity: 1, duration: 0.1 })
+            TLFade.fromTo(item3, { y: '-100%', opacity: 0, delay: -0.2 }, { y: '0%', opacity: 1, duration: 0.1 })
+            TLFade.fromTo(item4, { y: '-100%', opacity: 0, delay: -0.3 }, { y: '0%', opacity: 1, duration: 0.1 })
+            TLFade.fromTo(item5, { y: '-100%', opacity: 0, delay: -0.4 }, { y: '0%', opacity: 1, duration: 0.1 })
+
         };
 
         revealAnim();
-    }, [showItemBrochure, showItemProposal]);
-    useEffect(() => {
         if (location.hash === '#secondPage' || location.hash === '#thirdPage' || location.hash === '#fifthPage') {
             const el: any = document.querySelectorAll('#fp-nav ul li a');
-            el?.forEach((e) => e?.classList.add('active-color-dot'));
+            el?.forEach(e => e?.classList.add('active-color-dot'));
             setColorMenu('#fff');
-        } else {
+        }
+        else {
             const el: any = document.querySelectorAll('#fp-nav ul li a');
-            el?.forEach((e) => e?.classList.remove('active-color-dot'));
+            el?.forEach(e => e?.classList.remove('active-color-dot'));
             setColorMenu('#222');
         }
-    }, [location.hash]);
-    useLayoutEffect(() => {
-        handleChangeLanguage(selected);
-    }, []);
+    }, [showItemBrochure, showItemProposal, location.hash]);
+
 
     return (
         <>
@@ -85,37 +80,24 @@ const SideMenu = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="contact" element={<Contact />} />
             </Routes>
-            <div className="maxius-logo">
-                <a
-                    href="#firstPage"
-                    onClick={(e) => {
-                        if (location.pathname === '/') {
-                        } else {
-                            e.preventDefault();
-                            navigate('/');
-                        }
-                    }}
-                >
-                    MAXIUS
-                </a>
+            <div className='maxius-logo'>
+                <a href="#firstPage" onClick={(e) => {
+                    if (location.pathname === "/") {
+                    } else {
+                        e.preventDefault();
+                        navigate("/");
+                    }
+                }} >MAXIUS</a>
             </div>
             <div className="side-menu-container">
                 <nav role="navigation">
                     <div id="side-menu-toggle">
                         <input type="checkbox" checked={closeSideMenu} onClick={() => setCloseSideMenu((prev) => !prev)} />
                         <div className="side-menu-container-change-lang-wrapper">
-                            <div
-                                style={{ color: colorMenu }}
-                                className={`change-lang en ${selected === 'en' ? 'select' : ''}`}
-                                onClick={() => handleChangeLanguage('en')}
-                            >
+                            <div style={{ color: colorMenu }} className={`change-lang en ${selected === 'en' ? 'select' : ''}`} onClick={() => handleChangeLanguage('en')}>
                                 EN
                             </div>
-                            <div
-                                style={{ color: colorMenu }}
-                                className={`change-lang ko ${selected === 'ko' ? 'select' : ''}`}
-                                onClick={() => handleChangeLanguage('ko')}
-                            >
+                            <div style={{ color: colorMenu }} className={`change-lang ko ${selected === 'ko' ? 'select' : ''}`} onClick={() => handleChangeLanguage('ko')}>
                                 KR
                             </div>
                         </div>
@@ -138,7 +120,8 @@ const SideMenu = () => {
                                     KR
                                 </div>
                             </div>
-                            <div className="title-list">
+                            <div className='title-list'>
+
                                 <NavLink className="list" to="/" onClick={() => handleClickHome()}>
                                     <li>Home</li>
                                 </NavLink>
@@ -146,34 +129,19 @@ const SideMenu = () => {
                                     <li className={`${showItemBrochure ? 'choose' : ''}`}>Brochure</li>
                                     <ul className={`brochure-list ${showItemBrochure ? '' : 'disable'}`}>
                                         <li className="brochure-item item-1">
-                                            <a href={test} download="love BlackPink">
-                                                Download-1
-                                            </a>
-                                            <img src={arrow} alt=""></img>
+                                            <p>Download-1</p> <img src={arrow} alt=""></img>
                                         </li>
                                         <li className="brochure-item item-2">
-                                            <a href={test} download="love BlackPink">
-                                                Download-2
-                                            </a>
-                                            <img src={arrow} alt=""></img>
+                                            <p>Download-2</p> <img src={arrow} alt=""></img>
                                         </li>
                                         <li className="brochure-item item-3">
-                                            <a href={test} download="love BlackPink">
-                                                Download-3
-                                            </a>
-                                            <img src={arrow} alt=""></img>
+                                            <p>Download-3</p> <img src={arrow} alt=""></img>
                                         </li>
                                         <li className="brochure-item item-4">
-                                            <a href={test} download="love BlackPink">
-                                                Download-4
-                                            </a>
-                                            <img src={arrow} alt=""></img>
+                                            <p>Download-4</p> <img src={arrow} alt=""></img>
                                         </li>
                                         <li className="brochure-item item-5">
-                                            <a href={test} download="love BlackPink">
-                                                Download-5
-                                            </a>
-                                            <img src={arrow} alt=""></img>
+                                            <p>Download-5</p> <img src={arrow} alt=""></img>
                                         </li>
                                     </ul>
                                 </div>
@@ -181,22 +149,13 @@ const SideMenu = () => {
                                     <li className={`${showItemProposal ? 'choose' : ''}`}>Proposal</li>
                                     <ul className={`proposal-list ${showItemProposal ? '' : 'disable'}`}>
                                         <li className="proposal-item item-1">
-                                            <a href={test} download="love BlackPink">
-                                                Download-1
-                                            </a>
-                                            <img src={arrow} alt=""></img>
+                                            <p>Download-1</p> <img src={arrow} alt=""></img>
                                         </li>
                                         <li className="proposal-item item-2">
-                                            <a href={test} download="love BlackPink">
-                                                Download-2
-                                            </a>
-                                            <img src={arrow} alt=""></img>
+                                            <p>Download-2</p> <img src={arrow} alt=""></img>
                                         </li>
                                         <li className="proposal-item item-3">
-                                            <a href={test} download="love BlackPink">
-                                                Download-3
-                                            </a>
-                                            <img src={arrow} alt=""></img>
+                                            <p>Download-3</p> <img src={arrow} alt=""></img>
                                         </li>
                                     </ul>
                                 </div>
