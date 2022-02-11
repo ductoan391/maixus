@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useState } from 'react';
 import './secondPage.scss';
 import { gsap } from 'gsap';
 import { useTranslation } from 'react-i18next';
@@ -10,6 +10,10 @@ function SecondPage() {
     const dataList = t('second', { returnObjects: true }) as any;
     const [language, setLanguage] = useState(i18n.language);
     const location = useLocation();
+
+    useEffect(() => {
+        setLanguage(i18n.language);
+    },[i18n.language]);
 
     return (
         <div className="second-container">

@@ -176,6 +176,9 @@
         overflow-y: scroll;
         right: 0;
         height: 100%;
+        &::-webkit-scrollbar {
+            display: none;
+        }
 
         margin-left: -475px;
         box-sizing: border-box;
@@ -252,8 +255,8 @@
         }
 
         #address {
-            padding-top: 40px;
-            padding-bottom: 20px;
+            padding-top: 47px;
+            padding-bottom: 23px;
         }
         p {
             font-size: 13px;
@@ -263,6 +266,10 @@
         .link {
             color: #ffffff;
             text-decoration: none;
+            padding-bottom: 5px;
+            &:last-child {
+                padding-bottom: 4px;
+            }
             a {
                 color: #ffffff;
                 font-weight: 300;
@@ -290,6 +297,7 @@
         letter-spacing: normal;
         text-align: left;
 
+
         display: flex;
         opacity: 0;
 
@@ -310,16 +318,20 @@
     .item-4,
     .item-5 {
         opacity: 1;
-        transform: translateY(-100px);
     }
     .disable {
+        opacity: 0; 
+        visibility: hidden;
+        transition: 1s!important;
         display: none;
+    
     }
     .ko-font {
         font-family: $secondary-font;
     }
     .title-list {
-        min-height: 553px;
+        margin-top: 23px;
+        min-height: 605px;
     }
 }
 
