@@ -5,7 +5,7 @@ import { RightOutlined } from '@ant-design/icons'
 function FiifthPage() {
     return (
         <div className='fifth-container'>
-        
+
             <div className="fifth-wrapper">
                 <div className="block-item">
                     <h3 className="fifth-name">Company.</h3>
@@ -20,11 +20,9 @@ function FiifthPage() {
                 </div>
                 <div className="block-item">
                     <h3 className="fifth-name">Warranty.</h3>
-                    <div className="email">
-                        <a href="#">
-                            <p className="fifth-contact">Learn more <RightOutlined /></p>
-                        </a>
-                    </div>
+                    <a href="#">
+                        <p className="fifth-contact">Learn more <RightOutlined /></p>
+                    </a>
                 </div>
                 <div className="block-item">
                     <h3 className="fifth-name">Technical support.</h3>

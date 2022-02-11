@@ -9,27 +9,21 @@ import Home from '../Pages/HomePage/Home';
 import './SideMenu.scss';
 
 const SideMenu = () => {
-    const [selected, setSelected] = useState<'ko' | 'en'>('ko');
+    const [selected, setSelected] = useState('en');
     const [showItemBrochure, setShowItemBrochure] = useState<boolean>(false);
     const [showItemProposal, setShowItemProposal] = useState<boolean>(false);
     const [colorMenu, setColorMenu] = useState<string>('#222');
     const location = useLocation();
     const navigate = useNavigate();
-  
+
     const { t } = useTranslation();
 
     const [closeSideMenu, setCloseSideMenu] = useState<boolean>();
 
-    const handleChangeLanguage = (lang: 'ko' | 'en') => {
-        if (lang === 'ko') {
-            i18n.changeLanguage('ko');
-            setSelected(lang);
-        } else {
-            i18n.changeLanguage(lang);
-            setSelected(lang);
-        }
+    const handleChangeLanguage = (lang: string) => {
+        i18n.changeLanguage(lang);
+        setSelected(lang);
     };
-
     const handleClickBrochure = () => {
         setShowItemProposal(false);
         setShowItemBrochure(!showItemBrochure);
@@ -67,7 +61,7 @@ const SideMenu = () => {
         };
 
         revealAnim();
-        if(location.hash === '#secondPage' || location.hash === '#thirdPage' || location.hash === '#fifthPage') {
+        if (location.hash === '#secondPage' || location.hash === '#thirdPage' || location.hash === '#fifthPage') {
             const el: any = document.querySelectorAll('#fp-nav ul li a');
             el?.forEach(e => e?.classList.add('active-color-dot'));
             setColorMenu('#fff');
@@ -77,7 +71,7 @@ const SideMenu = () => {
             el?.forEach(e => e?.classList.remove('active-color-dot'));
             setColorMenu('#222');
         }
-    }, [showItemBrochure, showItemProposal,location.hash]);
+    }, [showItemBrochure, showItemProposal, location.hash]);
 
 
     return (
@@ -94,23 +88,23 @@ const SideMenu = () => {
                         navigate("/");
                     }
                 }} >MAXIUS</a>
-    </div>
+            </div>
             <div className="side-menu-container">
                 <nav role="navigation">
                     <div id="side-menu-toggle">
                         <input type="checkbox" checked={closeSideMenu} onClick={() => setCloseSideMenu((prev) => !prev)} />
                         <div className="side-menu-container-change-lang-wrapper">
-                            <div style={{color: colorMenu}} className={`change-lang en ${selected === 'en' ? 'select' : ''}`} onClick={() => handleChangeLanguage('en')}>
+                            <div style={{ color: colorMenu }} className={`change-lang en ${selected === 'en' ? 'select' : ''}`} onClick={() => handleChangeLanguage('en')}>
                                 EN
                             </div>
-                            <div style={{color: colorMenu}} className={`change-lang ko ${selected === 'ko' ? 'select' : ''}`} onClick={() => handleChangeLanguage('ko')}>
+                            <div style={{ color: colorMenu }} className={`change-lang ko ${selected === 'ko' ? 'select' : ''}`} onClick={() => handleChangeLanguage('ko')}>
                                 KR
                             </div>
                         </div>
 
-                        <span style={{backgroundColor: colorMenu}}></span>
-                        <span style={{backgroundColor: colorMenu}}></span>
-                        <span style={{backgroundColor: colorMenu}}></span>
+                        <span style={{ backgroundColor: colorMenu }}></span>
+                        <span style={{ backgroundColor: colorMenu }}></span>
+                        <span style={{ backgroundColor: colorMenu }}></span>
                         <ul id="menu">
                             <div className="side-menu-container-change-lang-menu">
                                 <div
@@ -128,46 +122,46 @@ const SideMenu = () => {
                             </div>
                             <div className='title-list'>
 
-                            <NavLink className="list" to="/" onClick={() => handleClickHome()}>
-                                <li>Home</li>
-                            </NavLink>
-                            <div className="list" onClick={() => handleClickBrochure()}>
-                                <li className={`${showItemBrochure ? 'choose' : ''}`}>Brochure</li>
-                                <ul className={`brochure-list ${showItemBrochure ? '' : 'disable'}`}>
-                                    <li className="brochure-item item-1">
-                                        <p>Download-1</p> <img src={arrow} alt=""></img>
-                                    </li>
-                                    <li className="brochure-item item-2">
-                                        <p>Download-2</p> <img src={arrow} alt=""></img>
-                                    </li>
-                                    <li className="brochure-item item-3">
-                                        <p>Download-3</p> <img src={arrow} alt=""></img>
-                                    </li>
-                                    <li className="brochure-item item-4">
-                                        <p>Download-4</p> <img src={arrow} alt=""></img>
-                                    </li>
-                                    <li className="brochure-item item-5">
-                                        <p>Download-5</p> <img src={arrow} alt=""></img>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className="list" onClick={() => handleClickProposal()}>
-                                <li className={`${showItemProposal ? 'choose' : ''}`}>Proposal</li>
-                                <ul className={`proposal-list ${showItemProposal ? '' : 'disable'}`}>
-                                    <li className="proposal-item item-1">
-                                        <p>Download-1</p> <img src={arrow} alt=""></img>
-                                    </li>
-                                    <li className="proposal-item item-2">
-                                        <p>Download-2</p> <img src={arrow} alt=""></img>
-                                    </li>
-                                    <li className="proposal-item item-3">
-                                        <p>Download-3</p> <img src={arrow} alt=""></img>
-                                    </li>
-                                </ul>
-                            </div>
-                            <NavLink className="list" to="/contact" onClick={() => handleClickHome()}>
-                                <li>Contact</li>
-                            </NavLink>
+                                <NavLink className="list" to="/" onClick={() => handleClickHome()}>
+                                    <li>Home</li>
+                                </NavLink>
+                                <div className="list" onClick={() => handleClickBrochure()}>
+                                    <li className={`${showItemBrochure ? 'choose' : ''}`}>Brochure</li>
+                                    <ul className={`brochure-list ${showItemBrochure ? '' : 'disable'}`}>
+                                        <li className="brochure-item item-1">
+                                            <p>Download-1</p> <img src={arrow} alt=""></img>
+                                        </li>
+                                        <li className="brochure-item item-2">
+                                            <p>Download-2</p> <img src={arrow} alt=""></img>
+                                        </li>
+                                        <li className="brochure-item item-3">
+                                            <p>Download-3</p> <img src={arrow} alt=""></img>
+                                        </li>
+                                        <li className="brochure-item item-4">
+                                            <p>Download-4</p> <img src={arrow} alt=""></img>
+                                        </li>
+                                        <li className="brochure-item item-5">
+                                            <p>Download-5</p> <img src={arrow} alt=""></img>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div className="list" onClick={() => handleClickProposal()}>
+                                    <li className={`${showItemProposal ? 'choose' : ''}`}>Proposal</li>
+                                    <ul className={`proposal-list ${showItemProposal ? '' : 'disable'}`}>
+                                        <li className="proposal-item item-1">
+                                            <p>Download-1</p> <img src={arrow} alt=""></img>
+                                        </li>
+                                        <li className="proposal-item item-2">
+                                            <p>Download-2</p> <img src={arrow} alt=""></img>
+                                        </li>
+                                        <li className="proposal-item item-3">
+                                            <p>Download-3</p> <img src={arrow} alt=""></img>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <NavLink className="list" to="/contact" onClick={() => handleClickHome()}>
+                                    <li>Contact</li>
+                                </NavLink>
                             </div>
                             <div className="info-wrapper">
                                 <p id="address" className={selected === 'ko' ? 'ko-font' : ''}>

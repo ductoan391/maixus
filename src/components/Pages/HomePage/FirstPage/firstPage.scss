@@ -25,18 +25,26 @@
     .content-container {
         position: relative;
         //padding-left: 10%;
-        top: 40%;
+        top: 44.5%;
         .title {
             font-weight: bold;
-            font-size: 5vw;
+            font-size: 95.5px;
             color: #1a2a59;
             text-align: left;
+            width: 470px;
         }
         .subTitle {
-            margin-top: 0.8rem;
+            margin-top: 13px;
             color: #222;
             font-weight: 300;
             text-align: left;
+            font-size: 20.5px;
+            line-height: 1.41;
+        }
+        &.ko{
+            .subTitle{
+                letter-spacing: -2px;
+            }
         }
         .note {
             color: #222;
@@ -69,8 +77,11 @@
 }
 @media (max-width: 800px) {
     .content-container {
+        .title{
+            font-size: 76px !important;
+        }
         .subTitle {
-            width: 35%;
+            font-size: 16.5px !important;
         }
         .note {
             margin-top: 5rem;
@@ -92,8 +103,7 @@
         left: 60px;
     }
     .content-container {
-        padding-left: 15%;
-        width: 40%;
+        padding-left: 8%;
         .subTitle,
         .note {
             width: 70%;
@@ -102,13 +112,20 @@
             margin-top: 5rem;
         }
     }
+    .first-container{
+        .background{
+            left: 100px;
+        }
+        .content-container{
+            top: 28%;
+        }
+    }
 }
 @media (min-width: 1025px) {
     .logo {
         left: 100px;
     }
     .content-container {
-        width: 30%;
         padding-left: 10%;
         .subTitle {
             width: 80%;
@@ -116,7 +133,7 @@
         }
         .note {
             font-size: 1.2rem;
-            margin-top: 6.25rem;
+            margin-top: 128px;
         }
     }
 }
