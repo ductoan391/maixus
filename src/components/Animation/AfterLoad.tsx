@@ -71,14 +71,14 @@ const afterLoad = (origin: any, destination: any, direction: any) => {
             });
             gsap.from(".fifth-name", {
                 autoAlpha: 0,
-                y: 420,
+                x: 420,
                 stagger: 0.1,
                 duration: 1,
                 ease: "power4.out",
             });
             gsap.from(".fifth-contact", {
                 autoAlpha: 0,
-                x: -220,
+                y: -220,
                 stagger: 0.1,
                 duration: 1,
                 ease: "power4.out",
