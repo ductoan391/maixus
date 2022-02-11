@@ -16,27 +16,36 @@ function FirstPage() {
     const location = useLocation();
 
     return (
-      <div className="first-container">
-          <img className='background' src={BG} alt="" />
-        
-          {
-              i18n.language === "ko" ? (
-                <div className='content-container ko'>
-                    <p className='title'>MAXI & US</p>
-                    <p className='subTitle'>{dataList.subTitle}</p>
-                    <p className='note'>{dataList.note}</p>
-                </div>
-              ) : (
-                <div className='content-container en'>
-                    <p className='title'>MAXI & US</p>
-                    <p className='subTitle'>{dataList.subTitle}</p>
-                    <p className='note'>{dataList.note}</p>
-                </div>
-              )
-          }
+      <div className='first-page'>
+          <div className="first-container">
+              <div className='inner-content'>
+                  <div className='background'>
+                      <img src={BG} alt="" />
+                  </div>
+                  {
+                      i18n.language === "ko" ? (
+                        <div className='content-container ko'>
+                            <p className='title'>MAX I & US</p>
+                            <p className='subTitle'>{dataList.subTitle}</p>
+                            <p className='note'>{dataList.note}</p>
+                        </div>
+                      ) : (
+                        <div className='content-container en'>
+                            <p className='title'>MAX I & US</p>
+                            <p className='subTitle'>{dataList.subTitle}</p>
+                            <p className='note'>{dataList.note}</p>
+                        </div>
+                      )
+                  }
+              </div>
 
 
+
+
+
+          </div>
       </div>
+
     )
 }
 

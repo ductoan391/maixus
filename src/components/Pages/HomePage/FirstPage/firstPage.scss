@@ -1,122 +1,154 @@
 @import "../../../../Assets/Style/Varialble.scss";
 
-.first-container {
+.first-page {
     height: 100vh;
-    .background {
+    width: 100%;
+    .first-container {
         width: 100%;
         height: 100%;
-        position: absolute;
-        background-size: cover;
-        background-position: center;
-        top: 0;
-        left: 0;
-    }
-    .logo {
-        position: absolute;
-        top: 50px;
-        //left: 100px;
-        h3 {
-            color: #222;
-            font-family: "Roboto-bold";
-            font-size: 21px;
-            text-transform: uppercase;
-        }
-    }
-    .content-container {
         position: relative;
-        //padding-left: 10%;
-        top: 40%;
-        .title {
-            font-weight: bold;
-            font-size: 5vw;
-            color: #1a2a59;
-            text-align: left;
+        left: 0;
+        right: 0;
+        top: 0;
+        color: #1a2a59;
+        text-align: left;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        z-index: 10;
+        .inner-content {
+            width: 100%;
+            height: auto;
+            .background {
+                img {
+                    pointer-events: none;
+                    width: 100vw;
+                    height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+                    min-height: 100vh;
+                    min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    border: none;
+                    @media (max-width: 1024px) {
+                        left: 57%;
+                    }
+                    @media (max-width: 484px) {
+                        left: 90%;
+                    }
+                }
+
+            }
+
+            .content-container {
+                margin-left: 10%;
+                width: 100%;
+                height: 100%;
+                .title {
+                    margin-top: 30px;
+                    font-size: 95.5px;
+                    font-weight: bold;
+                    line-height: 92px;
+                    transition: all 0.2s;
+                    position: relative;
+                }
+                .subTitle {
+                    width: 29%;
+                    margin-top: 40px;
+                    position: relative;
+                    font-size: 20.5px;
+                    font-weight: 300;
+                    line-height: 1.41;
+                    color: #222;
+                    white-space: pre-line;
+                }
+                .note {
+                    margin-top: 130px;
+                    position: relative;
+                    font-size: 20.5px;
+                    font-weight: 300;
+                    line-height: 1.41;
+                    color: #222;
+                }
+
+            }
+            @media (max-width: 1024px) {
+                    .content-container {
+                        .title {
+                            font-size: 70px;
+                            margin-top: 50px;
+                            line-height: 1.09;
+                        }
+                        .subTitle {
+                            width: 40%;
+                        }
+                        .note {
+                            width: 40%;
+                        }
+                    }
+
+
+            }
+            @media (max-width: 768px) {
+                .content-container {
+                    .title {
+                        font-size: 50px;
+                        line-height: 1;
+                    }
+                    .subTitle, .note {
+                        width: 45%;
+                    }
+                }
+            }
+            @media (max-width: 568px) {
+                .content-container {
+                    .title {
+                        font-size: 40px;
+                        line-height: 0.8;
+                    }
+                    .subTitle, .note {
+                        width: 65%;
+                    }
+                }
+            }
+            @media (max-width: 400px) {
+                .content-container {
+                    .title {
+                        font-size: 30px;
+                        line-height: 0.8;
+                    }
+                    .subTitle, .note {
+                        width: 65%;
+                    }
+                }
+            }
+            @media (max-width: 320px) {
+                .content-container {
+                    .title {
+                        font-size: 27px;
+                        line-height: 0.8;
+                    }
+                    .subTitle, .note {
+                        width: 65%;
+                    }
+                }
+            }
+            .content-container.en {
+                .subTitle,
+                .note {
+                    font-family: "Roboto Light", sans-serif;
+                }
+            }
+            .content-container.ko {
+                .subTitle,
+                .note {
+                    font-family: noto-sans-cjk-kr, sans-serif;
+                }
+            }
         }
-        .subTitle {
-            margin-top: 0.8rem;
-            color: #222;
-            font-weight: 300;
-            text-align: left;
-        }
-        .note {
-            color: #222;
-            font-weight: 300;
-            text-align: left;
-        }
-    }
-    .content-container.en {
-        .subTitle,
-        .note {
-            font-family: "Roboto Light", sans-serif;
-        }
-    }
-    .content-container.ko {
-        .subTitle,
-        .note {
-            font-family: noto-sans-cjk-kr, sans-serif;
-        }
+
     }
 }
 
-@media (max-width: 600px) {
-    .content-container {
-        .subTitle {
-            width: 20%;
-        }
-        .note {
-        }
-    }
-}
-@media (max-width: 800px) {
-    .content-container {
-        .subTitle {
-            width: 35%;
-        }
-        .note {
-            margin-top: 5rem;
-        }
-    }
-}
-@media (max-width: 768px) {
-    .content-container {
-        .subTitle {
-            width: 70%;
-        }
-        .note {
-        }
-    }
-}
 
-@media (max-width: 1024px) {
-    .logo {
-        left: 60px;
-    }
-    .content-container {
-        padding-left: 15%;
-        width: 40%;
-        .subTitle,
-        .note {
-            width: 70%;
-        }
-        .note {
-            margin-top: 5rem;
-        }
-    }
-}
-@media (min-width: 1025px) {
-    .logo {
-        left: 100px;
-    }
-    .content-container {
-        width: 30%;
-        padding-left: 10%;
-        .subTitle {
-            width: 80%;
-            font-size: 1.2rem;
-        }
-        .note {
-            font-size: 1.2rem;
-            margin-top: 6.25rem;
-        }
-    }
-}
