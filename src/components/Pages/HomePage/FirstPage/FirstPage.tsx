@@ -14,11 +14,9 @@ function FirstPage() {
   const { t } = useTranslation();
   const dataList = t('first', { returnObjects: true }) as any
   const location = useLocation();
-
   return (
     <div className="first-container">
       <img className='background' src={BG} alt="" />
-
       {
         i18n.language === "ko" ? (
           <div className='content-container ko'>
@@ -45,10 +43,6 @@ function FirstPage() {
           </div>
         )
       }
-
-
-    </div>
-  )
 }
 
 export default FirstPage;

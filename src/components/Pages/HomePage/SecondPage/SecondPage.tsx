@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useState } from 'react';
 import './secondPage.scss';
 import { gsap } from 'gsap';
 import { useTranslation } from 'react-i18next';
