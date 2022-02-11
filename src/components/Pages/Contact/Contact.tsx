@@ -17,8 +17,7 @@ function Contact() {
                 <div className="address">
                     <div className="address_one">
                         <p>{t("address2")}</p>
-                        <p>{t("address3")} <span>8길 17-10 1F</span></p>
-                        <span>T 02 543 4983</span>
+                        <p><span> Tel 02. 851. 2662/ Fax 02. 851. 2662</span></p>
                     </div>
                     <div className="address_two">
                         <div className="mail_one">
