@@ -30,6 +30,7 @@ const onLeave = (origin: any, destination: any, direction: any) => {
             gsap.to(".subTitle", { visibility: "hidden" });
             gsap.to(".note-page-one", { visibility: "hidden" });
             gsap.to(".page-three-content", { visibility: "hidden" });
+            gsap.to(".title_fourth", { visibility: "hidden", duration: 1, ease: "power4.out", });
             gsap.to(".maxius-logo", { color: "#fff" })
             break;
         case 2:
@@ -39,6 +40,7 @@ const onLeave = (origin: any, destination: any, direction: any) => {
             break;
         case 3:
             gsap.to(".page-three-content", { visibility: "hidden", duration: 1, ease: "power4.out", });
+            gsap.to(".title_fourth", { visibility: "hidden", duration: 1, ease: "power4.out", });
             gsap.to(".fifth-wrapper", { visibility: "hidden", duration: 1, ease: "power4.out", });
             gsap.to(".maxius-logo", { color: "#222222" })
             break;
