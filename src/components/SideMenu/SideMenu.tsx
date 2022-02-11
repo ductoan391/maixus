@@ -10,7 +10,7 @@ import './SideMenu.scss';
 const test = require("../../Assets/Images/Test.docx");
 
 const SideMenu = () => {
-    const [selected, setSelected] = useState<'ko' | 'en'>('ko');
+    const [selected, setSelected] = useState<'ko' | 'en'>('en');
     const [showItemBrochure, setShowItemBrochure] = useState<boolean>(false);
     const [showItemProposal, setShowItemProposal] = useState<boolean>(false);
     const [colorMenu, setColorMenu] = useState<string>('#222');
@@ -81,6 +81,10 @@ const SideMenu = () => {
             setColorMenu('#222');
         }
     },[location.hash]);
+    useLayoutEffect(() => {
+        handleChangeLanguage(selected);
+    },[])
+        
 
 
     return (
