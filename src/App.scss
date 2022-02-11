@@ -117,6 +117,10 @@ section {
     font-family: "Roboto-Light";
     src: url("./Assets/fonts/Roboto-Light.ttf");
 }
+@font-face {
+    font-family: "Roboto-Medium";
+    src: url("./Assets/fonts/Roboto-Medium.ttf");
+}
 @media screen and (max-width: 767.98px) {
     #fp-nav.fp-right {
         right: 50px !important;

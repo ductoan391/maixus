@@ -71,23 +71,67 @@
                 }
             }
         }
+        .slick-slide{
+            &:nth-child(1){
+                .item-box-item{
+                    h2{
+                        line-height: 26px;
+                    }
+                   &:nth-child(1){
+                        p{
+                            line-height: 52.5px;
+                        }
+                   }
+                   &:nth-child(2), &:nth-child(3){
+                        h2{
+                            line-height: 52.5px;
+                        }
+                        p{
+                           line-height: 19.5px;
+                        }
+                   }
+                    
+                }
+            }
+            &:nth-child(2){
+                .item-box-item{
+                    h2{
+                        line-height: 26px;
+                    }
+                    p{
+                        line-height: 52.5px;
+                    }
+                }
+            }
+            &:nth-child(3), &:nth-child(4){
+                .item-box-item{
+                    h2{
+                        line-height: 26px;
+                    }
+                    p{
+                        line-height: 19.5px;
+                    }
+                }
+            }
+        }
         .item-box {
             height: 250px;
             overflow-y: auto;
             color: #8b8b8b;
             padding: 10px 15px;
+            
             h2,
             p {
                 font-size: 13px;
-                margin-bottom: 3px;
                 letter-spacing: 0.65px;
             }
             h2 {
                 font-weight: bold;
                 color: black;
+                font-family: "Roboto-Medium";
             }
-            .item-box-item {
-                padding-top: 30px;
+            p{
+                font-family: "Roboto-Light";
             }
         }
         .slick-current {
@@ -106,6 +150,7 @@
                 padding-left: 10px;
                 margin-bottom: 0;
                 transform: none !important;
+                line-height: 2;
             }
             ::-webkit-scrollbar {
                 width: 1px;
@@ -143,5 +188,26 @@
     }
     .fourth-container{
         top: 60% !important;
+    }
+}
+@media screen and (max-width: 1500px) {
+    .fourth-container{
+        .list-story{
+            .slick-slide{
+                &:nth-child(1){
+                    .item-box-item{
+                        h2{
+                            line-height: 26px;
+                        }
+                       &:nth-child(1){
+                            p{
+                                line-height: 19.5px;
+                            }
+                       }
+                        
+                    }
+                }
+            }
+        }
     }
 }
