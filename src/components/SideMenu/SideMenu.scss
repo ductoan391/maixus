@@ -429,6 +429,9 @@
     }
 }
 @media (max-width: 500px) {
+    .side-menu-container-change-lang-menu {
+        right: 50px!important;
+    }
     .side-menu-container {
         #menu li {
             padding: 5px 0;
@@ -439,6 +442,9 @@
     }
 }
 @media (max-width: 400px) {
+    .side-menu-container-change-lang-menu {
+        right: 50px!important;
+    }
     .side-menu-container {
         &-change-lang-menu-item.ko {
         }
@@ -538,7 +544,7 @@
 }
 
 @media (max-height: 766px) {
-    .side-menu-container-change-lang-menu {
+     .side-menu-container-change-lang-menu {
         position: fixed;
         right: 100px;
     }
