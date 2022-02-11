@@ -17,7 +17,7 @@ import afterLoad from '../../Animation/AfterLoad';
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 const fullpageOptions = {
-    anchors: ["firstPage", "secondPage", "thirdPage", "fourthPage", "fiithPage"],
+    anchors: ["firstPage", "secondPage", "thirdPage", "fourthPage", "fifthPage"],
 };
 const Home = () => {
 
