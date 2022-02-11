@@ -1,12 +1,13 @@
 import { gsap } from 'gsap';
-import React, { useLayoutEffect, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { NavLink, Route, Routes, useLocation } from 'react-router-dom';
+import { NavLink, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import arrow from '../../Assets/Images/arrow-icon.png';
 import i18n from '../../i18n';
 import Contact from '../Pages/Contact/Contact';
 import Home from '../Pages/HomePage/Home';
 import './SideMenu.scss';
+const test = require("../../Assets/Images/Test.docx");
 
 const SideMenu = () => {
     const [selected, setSelected] = useState<'ko' | 'en'>('ko');
@@ -14,6 +15,7 @@ const SideMenu = () => {
     const [showItemProposal, setShowItemProposal] = useState<boolean>(false);
     const [colorMenu, setColorMenu] = useState<string>('#222');
     const location = useLocation();
+    const navigate = useNavigate();
   
     const { t } = useTranslation();
 
@@ -65,6 +67,9 @@ const SideMenu = () => {
         };
 
         revealAnim();
+     
+    }, [showItemBrochure, showItemProposal]);
+    useEffect(() => {
         if(location.hash === '#secondPage' || location.hash === '#thirdPage' || location.hash === '#fifthPage') {
             const el: any = document.querySelectorAll('#fp-nav ul li a');
             el?.forEach(e => e?.classList.add('active-color-dot'));
@@ -75,7 +80,7 @@ const SideMenu = () => {
             el?.forEach(e => e?.classList.remove('active-color-dot'));
             setColorMenu('#222');
         }
-    }, [showItemBrochure, showItemProposal,location.hash]);
+    },[location.hash]);
 
 
     return (
@@ -84,6 +89,15 @@ const SideMenu = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="contact" element={<Contact />} />
             </Routes>
+            <div className='maxius-logo'>
+                <a href="#firstPage" onClick={(e) => {
+                    if (location.pathname === "/") {
+                    } else {
+                        e.preventDefault();
+                        navigate("/");
+                    }
+                }} >MAXIUS</a>
+    </div>
             <div className="side-menu-container">
                 <nav role="navigation">
                     <div id="side-menu-toggle">
@@ -115,26 +129,34 @@ const SideMenu = () => {
                                     KR
                                 </div>
                             </div>
+                            <div className='title-list'>
+
                             <NavLink className="list" to="/" onClick={() => handleClickHome()}>
                                 <li>Home</li>
                             </NavLink>
                             <div className="list" onClick={() => handleClickBrochure()}>
                                 <li className={`${showItemBrochure ? 'choose' : ''}`}>Brochure</li>
                                 <ul className={`brochure-list ${showItemBrochure ? '' : 'disable'}`}>
+                           
                                     <li className="brochure-item item-1">
-                                        <p>Download-1</p> <img src={arrow} alt=""></img>
+                                        <a href={test} download="love BlackPink">Download-1</a>
+                                     <img src={arrow} alt=""></img>
                                     </li>
                                     <li className="brochure-item item-2">
-                                        <p>Download-2</p> <img src={arrow} alt=""></img>
+                                    <a href={test} download="love BlackPink">Download-2</a>
+                                        <img src={arrow} alt=""></img>
                                     </li>
                                     <li className="brochure-item item-3">
-                                        <p>Download-3</p> <img src={arrow} alt=""></img>
+                                    <a href={test} download="love BlackPink">Download-3</a>
+                                         <img src={arrow} alt=""></img>
                                     </li>
                                     <li className="brochure-item item-4">
-                                        <p>Download-4</p> <img src={arrow} alt=""></img>
+                                    <a href={test} download="love BlackPink">Download-4</a>
+                                         <img src={arrow} alt=""></img>
                                     </li>
                                     <li className="brochure-item item-5">
-                                        <p>Download-5</p> <img src={arrow} alt=""></img>
+                                    <a href={test} download="love BlackPink">Download-5</a>
+                                         <img src={arrow} alt=""></img>
                                     </li>
                                 </ul>
                             </div>
@@ -142,19 +164,23 @@ const SideMenu = () => {
                                 <li className={`${showItemProposal ? 'choose' : ''}`}>Proposal</li>
                                 <ul className={`proposal-list ${showItemProposal ? '' : 'disable'}`}>
                                     <li className="proposal-item item-1">
-                                        <p>Download-1</p> <img src={arrow} alt=""></img>
+                                    <a href={test} download="love BlackPink">Download-1</a>
+                                         <img src={arrow} alt=""></img>
                                     </li>
                                     <li className="proposal-item item-2">
-                                        <p>Download-2</p> <img src={arrow} alt=""></img>
+                                    <a href={test} download="love BlackPink">Download-2</a>
+                                        <img src={arrow} alt=""></img>
                                     </li>
                                     <li className="proposal-item item-3">
-                                        <p>Download-3</p> <img src={arrow} alt=""></img>
+                                    <a href={test} download="love BlackPink">Download-3</a>
+                                         <img src={arrow} alt=""></img>
                                     </li>
                                 </ul>
                             </div>
                             <NavLink className="list" to="/contact" onClick={() => handleClickHome()}>
                                 <li>Contact</li>
                             </NavLink>
+                            </div>
                             <div className="info-wrapper">
                                 <p id="address" className={selected === 'ko' ? 'ko-font' : ''}>
                                     {t('address')}
