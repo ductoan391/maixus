@@ -538,6 +538,10 @@
 }
 
 @media (max-height: 766px) {
+    .side-menu-container-change-lang-menu {
+        position: fixed;
+        right: 100px;
+    }
     #menu {
         padding-bottom: 30px;
         padding-top: 60px;
