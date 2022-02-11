@@ -93,7 +93,7 @@
     }
 }
 
-@media screen and (max-width: 987px) and (min-width: 584px) {
+@media screen and (max-width: 987px) {
     .second-container {
         .second-page-text-area {
             color: white;
@@ -102,11 +102,12 @@
             margin: 0 auto;
             .text {
                 letter-spacing: 3px;
-                font-size: 35px;
+                font-size: 20px;
                 font-weight: bold;
             }
             .text-yellow {
-                font-size: 35px;
+                letter-spacing: 3px!important;
+                font-size: 20px;
                 color: #ff9933;
                 font-weight: bold;
             }
@@ -116,17 +117,40 @@
 
 @media screen and (max-width: 483px) {
     .second-container {
-        .text-area {
+        .second-page-text-area {
             line-height: 0.5;
             color: white;
             max-width: 300px;
             .text {
                 letter-spacing: 2px;
+                line-height: 1.8;
                 font-size: 20px;
                 font-weight: bold;
             }
             .text-yellow {
+                letter-spacing: 2px!important;
                 font-size: 20px !important;
+                color: #ff9933;
+                font-weight: bold;
+            }
+        }
+    }
+}
+@media screen and (max-width: 300px) {
+    .second-container {
+        .second-page-text-area {
+            line-height: 0.5;
+            color: white;
+            max-width: 250px;
+            .text {
+                letter-spacing: 2px;
+                line-height: 1.8;
+                font-size: 10px;
+                font-weight: bold;
+            }
+            .text-yellow {
+                letter-spacing: 2px!important;
+                font-size: 10px !important;
                 color: #ff9933;
                 font-weight: bold;
             }
