@@ -1,5 +1,4 @@
 @import "../../../../Assets/Style/Varialble.scss";
-
 .first-container {
     height: 100vh;
     .background {
@@ -40,8 +39,8 @@
             font-size: 20.5px;
             line-height: 1.41;
         }
-        &.ko{
-            .subTitle{
+        &.ko {
+            .subTitle {
                 letter-spacing: -2px;
             }
         }
@@ -64,7 +63,6 @@
         }
     }
 }
-
 @media (max-width: 600px) {
     .content-container {
         .subTitle {
@@ -76,7 +74,7 @@
 }
 @media (max-width: 800px) {
     .content-container {
-        .title{
+        .title {
             font-size: 76px !important;
         }
         .subTitle {
@@ -96,7 +94,6 @@
         }
     }
 }
-
 @media (max-width: 1024px) {
     .logo {
         left: 60px;
@@ -111,11 +108,11 @@
             margin-top: 5rem;
         }
     }
-    .first-container{
-        .background{
+    .first-container {
+        .background {
             left: 100px;
         }
-        .content-container{
+        .content-container {
             top: 28%;
         }
     }
