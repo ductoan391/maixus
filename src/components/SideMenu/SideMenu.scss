@@ -293,6 +293,7 @@
         list-style-type: none;
         font-weight: 300;
         font-stretch: normal;
+        align-items: center;
         font-style: normal;
         letter-spacing: normal;
         text-align: left;
@@ -301,14 +302,14 @@
         display: flex;
         opacity: 0;
 
-        p {
+        a {
             color: #fff;
             font-size: 19.5px;
             margin-right: 15px;
             display: inline;
         }
         img {
-            width: 11px;
+            width: 12px;
             height: 16px;
         }
     }
@@ -411,7 +412,7 @@
             }
             .brochure-item,
             .proposal-item {
-                p {
+                a {
                     font-size: 10px;
                 }
             }
@@ -545,7 +546,7 @@
 
         li {
             font-size: 10px;
-            P {
+            a {
                 font-size: 8px;
             }
             img {
