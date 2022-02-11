@@ -9,9 +9,9 @@ const onLeave = (origin: any, destination: any, direction: any) => {
                 duration: 1.2,
                 ease: "power4.out",
             });
-            gsap.from(".subTitle-page-one", {
+            gsap.from(".subTitle", {
                 autoAlpha: 0,
-                x: -280,
+                x: -780,
                 duration: 1,
                 ease: "power4.out",
                 delay: 0.3,
@@ -25,8 +25,8 @@ const onLeave = (origin: any, destination: any, direction: any) => {
             gsap.to(".maxius-logo", { color: "#222222" })
             break;
         case 1:
-            // gsap.to(".text-decs", { visibility: "hidden" });
-            gsap.to(".subTitle-page-one", { visibility: "hidden" });
+            gsap.to(".title-page-one", { visibility: "hidden" });
+            gsap.to(".subTitle", { visibility: "hidden" });
             gsap.to(".page-three-content", { visibility: "hidden" });
             gsap.to(".maxius-logo", { color: "#fff" })
             break;

@@ -26,7 +26,7 @@ function FirstPage() {
                         i18n.language === "ko" ? (
                             <div className='content-container ko'>
                                 <p className='title-page-one'>MAX I & US</p>
-                                <span className='subTitle-page-one'>맥시우스는 시스템반도체를 자체 개발하여 고성능 <br />
+                                <span className='subTitle'>맥시우스는 시스템반도체를 자체 개발하여 고성능 <br />
                                     서버용 컴퓨터를 제조 판매하는 회사입니다. <br />
                                     우리는 고객에게 최고의 장비와 솔루션을 <br />
                                     제공합니다.</span>
@@ -35,7 +35,7 @@ function FirstPage() {
                         ) : (
                             <div className='content-container en'>
                                 <p className='title-page-one'>MAX I & US</p>
-                                <span className='subTitle-page-one'>Maxius is a company that develops its own system <br />
+                                <span className='subTitle'>Maxius is a company that develops its own system <br />
                                     semiconductors and manufactures and sells <br />
                                     computers for high-performance servers. We <br />
                                     supply equipment and solutions to clients in <br />
