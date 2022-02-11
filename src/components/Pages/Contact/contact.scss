@@ -8,7 +8,9 @@
         padding: 60px 0;
         animation: fade 1s ease;
         font-family: "Montserrat", sans-serif;
+        height: 18%;
     }
+
     .wrap_content {
         display: flex;
         .map {
@@ -32,10 +34,13 @@
                 animation: fade 2s ease;
                 padding: 12.8%;
                 margin-bottom: 100px;
+                .text-ad {
+                    line-height: 30px;
+                }
                 p {
                     font-size: 16px;
                     font-weight: 700;
-                    font-family: "Montserrat", sans-serif;
+                    font-family: "Montserrat-bold", sans-serif;
                     span {
                         font-weight: normal;
                     }
@@ -52,6 +57,7 @@
                 .mail_one {
                     .text1 {
                         animation: fade 1s ease-in;
+                        line-height: 30px;
                     }
                     .text2 {
                         animation: fade 1.3s ease-in;
@@ -61,6 +67,7 @@
                     margin-top: 20px;
                     .text3 {
                         animation: fade 1.7s ease-in;
+                        line-height: 30px;
                     }
                     .text4 {
                         animation: fade 2s ease-in;
