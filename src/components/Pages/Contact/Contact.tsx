@@ -16,17 +16,17 @@ function Contact() {
                 </div>
                 <div className="address">
                     <div className="address_one">
-                        <p>{t("address2")}</p>
+                        <p className='text-ad'>{t("address2")}</p>
                         <p><span> Tel 02. 851. 2662/ Fax 02. 851. 2662</span></p>
                     </div>
                     <div className="address_two">
                         <div className="mail_one">
-                            <p className='text1'>Work with us</p>
-                            <p className='text2'>loocreative@playlooc.com</p>
+                            <p className='text1'>Company</p>
+                            <p className='text2'>support@taejin.co.kr</p>
                         </div>
                         <div className="mail_two">
-                            <p className='text3'>Careers</p>
-                            <p className='text4'>loocreative@playlooc.com</p>
+                            <p className='text3'>Technical support</p>
+                            <p className='text4'>support@taejin.co.kr</p>
                         </div>
                     </div>
                 </div>

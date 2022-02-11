@@ -21,23 +21,50 @@
         }
     }
     .second-page-text-area {
-        line-height: 95px;
         color: white;
-        max-width: 1500px;
+        max-width: 1322px;
         line-height: 1.18;
         font-size: 67px;
         font-weight: bold;
         visibility: hidden; //done
+        .laguage-ko{
+            p{
+                &:nth-child(1), &:nth-child(4){
+                    letter-spacing: 8px;
+                }
+                &:nth-child(3){
+                    letter-spacing: -9px;
+                }
+                &:nth-child(5){
+                    letter-spacing: -4px;
+                }
+            }
+        }
         .text {
-            letter-spacing: 5px;
+            letter-spacing: 0.67px;
             font-size: 67px;
             font-weight: bold;
             color: white;
+        }
+        .inline-text{
+            display: inline;
         }
         .text-yellow {
             font-size: 67px;
             color: #ff9933;
             font-weight: bold;
+        }
+        .spacing-one{
+            letter-spacing: -1px;
+        }
+        .spacing-two{
+            letter-spacing: 1.7px;
+        }
+        .spacing-three{
+            letter-spacing: -0.1px;
+        }
+        .spacing-four{
+            letter-spacing: -1.3px;
         }
     }
 }
@@ -64,17 +91,18 @@
 
 @media screen and (max-width: 987px) and (min-width: 584px) {
     .second-container {
-        .text-area {
+        .second-page-text-area {
             color: white;
             line-height: 50px;
-            max-width: 500px;
+            max-width: 80%;
+            margin: 0 auto;
             .text {
                 letter-spacing: 3px;
-                font-size: 25px;
+                font-size: 35px;
                 font-weight: bold;
             }
             .text-yellow {
-                font-size: 25px;
+                font-size: 35px;
                 color: #ff9933;
                 font-weight: bold;
             }

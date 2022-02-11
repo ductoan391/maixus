@@ -8,17 +8,17 @@
         "number3": "3.",
         "number4": "4.",
         "textWhite1": "device manufacturer.",
-        "textWhite21": "Production and Sales of",
-        "textWhite22": "igh-",
-        "textWhite23": "erformance",
-        "textWhite24": "ervers with self - manufactured system device",
+        "textWhite2": "Production and Sales of",
+        "textWhite21": "igh-",
+        "textWhite22": "erformance ",
+        "textWhite24": "ervers with self - manufactured system device. ",
         "textWhite31": "Construction of operative",
-        "textWhite32": "based on HPS.",
+        "textWhite32": "based on HPS. ",
         "textWhite4": "Establish solu-tion relating to Blockchain",
         "textYellow1": "Self - produced",
-        "textYellow21": "H",
-        "textYellow22": "P",
-        "textYellow23": "S",
+        "textYellow2": "H",
+        "textYellow21": "P",
+        "textYellow22": "S",
         "textYellow3": "Block chain IDC ",
         "textYellow4": "IPFS "
     },
@@ -182,20 +182,24 @@
     },
     "thirdPage": {
         "product": {
-          "text": "Maxius is the only self-developed semiconductor company who builds servers with high technology. As we provides solutions specialized for intelligent data centers and the IT industry, we will develop into a growing company in global market."
+            "text": "Maxius is the only self-developed semiconductor company who builds servers with high technology. As we provides solutions specialized for intelligent data centers and the IT industry, we will develop into a growing company in global market."
         },
         "technology": {
-          "text": "Maxius is the only self-developed semiconductor company who builds servers with high technology. As we provides solutions specialized for intelligent data centers and the IT industry, we will develop into a growing company in global market."
+            "text": "Maxius is the only self-developed semiconductor company who builds servers with high technology. As we provides solutions specialized for intelligent data centers and the IT industry, we will develop into a growing company in global market."
         },
         "application": {
-          "text": "Maxius is the only self-developed semiconductor company who builds servers with high technology. As we provides solutions specialized for intelligent data centers and the IT industry, we will develop into a growing company in global market."
+            "text": "Maxius is the only self-developed semiconductor company who builds servers with high technology. As we provides solutions specialized for intelligent data centers and the IT industry, we will develop into a growing company in global market."
         },
         "blockchain": {
-          "text": ""
+            "text": ""
         }
-      },
+    },
     "first": {
-        "subTitle": "Maxius is a company that develops its own system zsemiconductors and manufactures and sells computers for high-performance servers. We supply equipment and solutions to clients in various cutting edge fields.",
+        "subTitle1": "Maxius is a company that develops its own system",
+        "subTitle2": "semiconductors and manufactures and sells",
+        "subTitle3": "computers for high-performance servers. We",
+        "subTitle4": "supply equipment and solutions to clients in",
+        "subTitle5": "various cutting edge fields.",
         "note": "Together, we will be the best in value and speed."
     }
 }
