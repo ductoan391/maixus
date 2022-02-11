@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useState } from 'react';
 import './secondPage.scss';
 import { gsap } from 'gsap';
 import { useTranslation } from 'react-i18next';
@@ -11,11 +11,13 @@ function SecondPage() {
     const [language, setLanguage] = useState(i18n.language);
     const location = useLocation();
 
+    useEffect(() => {
+        setLanguage(i18n.language);
+    },[i18n.language]);
+
     return (
         <div className="second-container">
-            <div className="first_content">
-                <p>MAXIUS</p>
-            </div>
+          
             <div className="second-page-container">
                 <div className="second-page-text-area">
                     {language === 'ko' ? (

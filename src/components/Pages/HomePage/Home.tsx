@@ -23,7 +23,8 @@ const Home = () => {
         <ReactFullpage
         licenseKey={'263DXXXX-B839XXXX-AE67XXXX-F398XXXX'}
             anchors={anchors}
-            navigation
+            navigation={true}
+            navigationPosition={'right'}
             scrollingSpeed={700}
             onLeave={onLeave}
             afterLoad={afterLoad}
