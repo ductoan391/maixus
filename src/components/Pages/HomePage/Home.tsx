@@ -16,18 +16,22 @@ import afterLoad from '../../Animation/AfterLoad';
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
+const fullpageOptions = {
+    anchors: ["firstPage", "secondPage", "thirdPage", "fourthPage", "fiithPage"],
+};
 const Home = () => {
-    const anchors = ['#firstPage', '#secondPage', '#thirdPage', '#fourthPage', '#fifthPage'];
+
 
     return (
         <ReactFullpage
-        licenseKey={'263DXXXX-B839XXXX-AE67XXXX-F398XXXX'}
-            anchors={anchors}
+            licenseKey={'263DXXXX-B839XXXX-AE67XXXX-F398XXXX'}
+            {...fullpageOptions}
             navigation={true}
             navigationPosition={'right'}
             scrollingSpeed={700}
             onLeave={onLeave}
             afterLoad={afterLoad}
+            normalScrollElements={'.item-story'}
             render={() => {
                 return (
                     <>

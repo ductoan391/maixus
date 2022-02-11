@@ -34,7 +34,7 @@
                 color: white;
                 margin-bottom: 0;
                 font-family: 'Roboto-Bold';
-                margin-bottom: 16px;
+                margin-bottom: 8px;
             }
             a {
                 color: white;
@@ -49,8 +49,18 @@
                     font-family: 'Roboto-Light';
                 }
             }
+            &:nth-child(2){
+                margin-top: 65px;
+                margin-bottom: 47px;
+                h3{
+                    margin-top: -15px;
+                }
+            }
             &:nth-child(3){
                 margin-bottom: 0 !important;
+                .fifth-contact{
+                    margin-top: -8px;
+                }
             }
             .learn-more {
                 animation: moveInRight 1.2s ease-in-out;
