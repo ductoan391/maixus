@@ -13,7 +13,7 @@
         top: 50px;
         left: 100px;
         color: #fff;
-        font-family: "Roboto";
+        font-family: "NotoSansCJKkr-Bold";
         p {
             line-height: 24px;
             font-weight: 600;
@@ -27,17 +27,21 @@
         font-size: 67px;
         font-weight: bold;
         visibility: hidden; //done
-        .laguage-ko{
-            p{
-                &:nth-child(1), &:nth-child(4){
+        .laguage-ko {
+            p {
+                &:nth-child(1),
+                &:nth-child(4) {
                     letter-spacing: 8px;
                 }
-                &:nth-child(3){
+                &:nth-child(3) {
                     letter-spacing: -9px;
                 }
-                &:nth-child(5){
+                &:nth-child(5) {
                     letter-spacing: -4px;
                 }
+            }
+            .text {
+                font-family: "NotoSansCJKkr-Bold";
             }
         }
         .text {
@@ -46,7 +50,7 @@
             font-weight: bold;
             color: white;
         }
-        .inline-text{
+        .inline-text {
             display: inline;
         }
         .text-yellow {
@@ -54,16 +58,16 @@
             color: #ff9933;
             font-weight: bold;
         }
-        .spacing-one{
+        .spacing-one {
             letter-spacing: -1px;
         }
-        .spacing-two{
+        .spacing-two {
             letter-spacing: 1.7px;
         }
-        .spacing-three{
+        .spacing-three {
             letter-spacing: -0.1px;
         }
-        .spacing-four{
+        .spacing-four {
             letter-spacing: -1.3px;
         }
     }

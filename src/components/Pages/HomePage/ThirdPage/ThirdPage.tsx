@@ -31,7 +31,7 @@ function PageThree() {
                     </div>
                     <div className="item">
                         <div className="item-content">
-                            <p className="title title_fourth note">Block Chain</p>
+                            <p className="title title_fourth noteBC">Block Chain</p>
                             <p className="desc">{dataList.blockchain.text}</p>
                         </div>
                     </div>
